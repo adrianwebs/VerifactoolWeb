@@ -17,6 +17,9 @@ export interface BlogPost {
 }
 
 export function getBlogSlugs() {
+    if (!fs.existsSync(BLOG_DIRECTORY)) {
+        return [];
+    }
     return fs.readdirSync(BLOG_DIRECTORY).filter(file => file.endsWith('.mdx'));
 }
 
