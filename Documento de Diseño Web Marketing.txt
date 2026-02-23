@@ -1,0 +1,561 @@
+# Documento de Diseño Web: VerifacTool (Marketing Site)
+
+| **Proyecto** | **Web Comercial VerifacTool** |
+| --- | --- |
+| **Estilo Base** | Soft UI / Minimalismo Moderno |
+| **Referencia** | FlowSync (Estructura) + App Design (Estética) |
+| **Vibe** | Profesional, Tecnológico, Transparente, Confiable |
+
+---
+
+## 1. Paleta de Colores (Marketing & Trust)
+
+A diferencia de la app (que es muy monocromática para evitar distracciones), la web necesita vender "confianza y tranquilidad". Sustituiremos los tonos púrpuras/rosas de la imagen de referencia ("FlowSync") por **azules financieros y tecnológicos**.
+
+### Colores Primarios
+
+- **Trust Blue (Primario - CTA):** #2563EB (Un azul real, vibrante pero serio. Para botones principales "Empezar Gratis").
+- **Deep Navy (Texto Títulos):** #1E293B (Azul grisáceo muy oscuro. Sustituye al negro puro para dar elegancia).
+- **Body Text:** #475569 (Gris azulado medio para párrafos).
+
+### Fondos y Gradientes (Atmósfera)
+
+- **Background Base:** #FFFFFF (Blanco puro) y #F8FAFC (Gris azulado muy pálido).
+- **"The Trust Glow" (Gradiente):** En lugar de las nubes moradas de la referencia, usaremos un degradado radial sutil muy suave en la zona superior (Hero Section).
+    - *CSS:* background: radial-gradient(circle at 50% 0%, #E0F2FE 0%, #FFFFFF 60%); (Un brillo azul cielo que se desvanece a blanco).
+
+### Acentos
+
+- **Soft Blue Accent:** #DBEAFE (Para fondos de iconos o estados "hover").
+- **Success Green:** #10B981 (Para los "Checks" en la tabla de precios y badges de "Cumple Verifactu").
+
+---
+
+## 2. Tipografía (Marketing)
+
+Mantenemos la familia de la App (**Inter** o **Plus Jakarta Sans**) pero ajustamos los pesos para impactar.
+
+- **Display Hero (H1):** 64px / Bold / Tracking tight (-0.02em). *Ej: "Tu facturación, automatizada y legal."*
+- **Section Headings (H2):** 40px / SemiBold.
+- **Lead Paragraph:** 20px / Regular / Color #64748B.
+
+---
+
+## 3. Componentes de la Interfaz (Web Kit)
+
+Basados en la estructura de "FlowSync" pero con la estética de tu App.
+
+### 3.1. Botones (CTAs)
+
+- **Estilo:** Pill Shape (border-radius: 100px).
+- **Primario:** Fondo **Trust Blue** (#2563EB), Texto Blanco, Sombra suave azulada (box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4)).
+- **Secundario:** Fondo Blanco, Borde gris muy suave (#E2E8F0), Texto Dark Navy.
+
+### 3.2. Tarjetas y Contenedores (Glassmorphism Light)
+
+Tal como en la referencia "FlowSync", usaremos contenedores grandes con esquinas muy redondeadas.
+
+- **Bento Grids:** Para la sección de características ("Features that Set us Apart"), usar tarjetas con border-radius: 24px o 32px.
+- **Estilo de Tarjeta:**
+    - Fondo: Blanco.
+    - Borde: 1px sólido color #F1F5F9.
+    - Hover: Al pasar el ratón, el borde se vuelve #BFDBFE (azul claro) y la tarjeta sube 4px.
+
+### 3.3. Elementos Visuales (Assets)
+
+- **Capturas de la App (Mockups):** Deben flotar sobre el fondo. Usar una sombra de "elevación alta" para que parezca que la app sale de la pantalla.
+    - *Efecto:* box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+- **Iconografía:** Íconos dentro de círculos con fondo azul muy pálido (#EFF6FF) y trazo azul medio.
+
+---
+
+## 4. Estructura de Página (Landing Page Breakdown)
+
+Siguiendo el flujo de la imagen de referencia, adaptado a VerifacTool:
+
+### Sección 1: Hero (La Promesa)
+
+- **Fondo:** El degradado "Trust Glow" (Azul cielo a blanco).
+- **Texto Central:** "La solución definitiva para tu Facturación y Cumplimiento Verifactu".
+- **Subtítulo:** "VerifacTool elimina el papeleo, conecta con tu banco y cumple con Hacienda automáticamente."
+- **Botones:** [Empezar Gratis] (Azul) y [Ver Demo] (Blanco).
+- **Visual:** Una imagen grande de la interfaz de la App (el dashboard que diseñamos antes) flotando en el centro, ligeramente inclinada o frontal.
+- **Social Proof:** Debajo de la imagen, logotipos en gris claro (escala de grises) de: *AEAT, Stripe, BBVA, CaixaBank*.
+
+### Sección 2: El Problema (Narrativa)
+
+- *Referencia:* La chica con gafas de la imagen.
+- **Layout:** Texto a la izquierda, Imagen a la derecha (o viceversa).
+- **Contenido:** "¿Luchando con hojas de cálculo y miedo a las multas?".
+- **Estilo:** Fondo blanco limpio. La imagen debe tener esquinas redondeadas (24px).
+
+### Sección 3: Cómo Funciona (Steps)
+
+- *Referencia:* "Automate in 3 Steps".
+- **Diseño:** 3 Tarjetas verticales conectadas por una línea sutil gris discontinua.
+    1. **Conecta:** Sube tus gastos o conecta tu banco.
+    2. **Verifica:** El sistema cruza datos y genera facturas legales.
+    3. **Presenta:** Tus impuestos (Modelo 303/130) listos en un clic.
+
+### Sección 4: Grid de Funcionalidades (Bento Grid)
+
+- *Referencia:* "Features That Set us Apart".
+- **Estilo:** Grid de 2x2 o 3x2 tarjetas grandes.
+- **Look:** Fondo gris muy tenue (#F8FAFC). Tarjetas blancas encima.
+    - *Card 1:* "Integración Verifactu" (Icono de escudo/seguridad azul).
+    - *Card 2:* "Lectura de Gastos OCR" (Icono de escáner).
+    - *Card 3:* "Conciliación Bancaria" (Icono de gráfico).
+
+### Sección 5: Pricing (Precios Claros)
+
+- *Referencia:* "Flexible Plans".
+- **Tarjetas:** 3 columnas.
+- **Destacado (Pro):** La tarjeta central debe ser más alta o tener un borde azul (#2563EB) de 2px.
+    - *Header:* Fondo azul suave en la tarjeta Pro.
+    - *Precio:* Tipografía grande y oscura.
+    - *Lista:* Checks en verde (#10B981) para transmitir positividad.
+
+### Sección 6: CTA Final & Footer
+
+- **CTA:** Fondo degradado azul suave. Texto grande: "Potencia tu flujo de trabajo hoy". Botón oscuro.
+- **Footer:** Minimalista. Links en gris, logo a la izquierda.
+
+
+Lo de arriba era un ejemplo, quiero que lo adaptes a mi Software con el siguiente contenido:
+
+Te propongo una landing pensada para captación de prueba gratis, con foco en “software verifactu” pero dejando claro que VerifacTool es un mini‑ERP/CRM para autónomos y pymes.
+
+Abajo te detallo: estructura de secciones, copy orientativo y cómo maquetaría la interfaz en cada bloque.
+
+1. Hero (above the fold)
+Objetivo: que en 5 segundos entiendan qué hace, para quién es y que hay urgencia Verifactu.
+
+Copy orientativo
+
+H1:
+“Software de facturación Verifactu para autónomos y pymes en España”
+
+Subtítulo:
+“Cumple Verifactu sin complicarte y centraliza facturas, gastos y clientes en un solo ERP online.”
+
+Bullets rápidos (micro‑beneficios):
+
+“100% alineado con la normativa Verifactu 2026 (Ley Antifraude)”
+
+“Facturación, gastos, impuestos y CRM en una sola herramienta”
+
+“Diseñado para asesorías, autónomos y pequeñas empresas”
+
+CTA principal (botón):
+“Empieza gratis”
+Secundario en texto: “Ver demo en 5 minutos”
+
+Interfaz / layout
+
+Columna izquierda: texto H1 + subtítulo + bullets + CTA primario (botón grande) y enlace texto secundario (“No tienes tiempo, mira la demo grabada”).
+
+Columna derecha: mockup del dashboard (gráfico de Ingresos vs Gastos, alertas de facturas Verifactu, buscador Cmd/Ctrl+K).
+
+Encima del H1, una etiqueta pequeña tipo “ERP online compatible Verifactu 2026”.
+
+Encima de la línea de flotación repite el CTA en el menú (“Prueba gratis”).
+
+2. Módulos principales (producto = mini‑suite ERP)
+Aquí anclas la visión “no es solo Verifactu, es tu sistema operativo financiero”.
+
+Título de sección (H2)
+“Mucho más que Verifactu: tu mini‑ERP online”
+
+Divide en 4 tarjetas clicables, cada una enlazando a su landing:
+
+Módulo Fiscal y Facturación (Core) → /software-verifactu
+
+Título tarjeta: “Facturación Verifactu sin errores”
+
+Bullets:
+
+“Facturas ordinarias, simplificadas y rectificativas encadenadas (hash SHA‑256).”
+
+“QR Verifactu automático en cada PDF.”
+
+“Envió automático a la AEAT y gestión de estados: aceptada, con errores o rechazada.”
+
+Micro‑CTA: “Ver detalles de Verifactu”
+
+Módulo Contable y Gastos → /software-contabilidad-online
+
+Título tarjeta: “Gastos, IVA y modelos sin Excel”
+
+Bullets:
+
+“Sube tickets y facturas con OCR; extraemos proveedor, NIF, base e IVA.”
+
+“Clasifica por categorías y visualiza tu beneficio real (ingresos – gastos).”
+
+“Borradores automáticos de Modelo 303 e IRPF (130).”
+
+Micro‑CTA: “Ver contabilidad online”
+
+Módulo CRM y Ventas → (puede compartir landing con ERP general)
+
+Título tarjeta: “Del lead a la factura en un clic”
+
+Bullets:
+
+“Pipeline visual en Kanban: lead, presupuesto, negociación, ganado/perdido.”
+
+“Convierte presupuestos en facturas o proformas en un clic.”
+
+“Portal cliente para descargar facturas y pagar online.”
+
+Automatización y Cobros → (podrías llevar a /precios o una futura landing “automatizacion-facturacion”)
+
+Título tarjeta: “Cobros automáticos y suscripciones”
+
+Bullets:
+
+“Facturas recurrentes mensuales o anuales sin intervención manual.”
+
+“Botón ‘Pagar ahora’ con Stripe y PayPal.”
+
+“Recordatorios automáticos de facturas vencidas (dunning).”
+
+Micro‑CTA: “Ver planes y precios”
+
+Interfaz / layout
+
+Grid 2x2 de tarjetas con icono simple, título, 2–3 bullets y un enlace “Saber más”.
+
+Cada tarjeta entera clicable hacia su URL correspondiente (muy importante SEO + UX).
+
+Bajo el grid, un CTA secundario: “Ver todas las funciones → /software-verifactu”.
+
+3. Bloque de urgencia Verifactu (deadline + riesgo)
+Esta sección empuja a la acción jugando con la obligación legal.
+
+Título (H2)
+“Verifactu será obligatorio en 2026: evita sanciones y cambios de última hora”
+
+Contenido
+
+Párrafo corto explicando el contexto:
+“La nueva normativa Verifactu obligará a todos los programas de facturación en España a registrar y encadenar cada factura, enviar la información a la AEAT y garantizar la inalterabilidad de los datos. Si tu software no está adaptado, te arriesgas a sanciones y a tener que migrar deprisa y corriendo.”
+
+Bullets con beneficios de estar preparado:
+
+“Cumplimiento Verifactu desde el día uno, sin cambiar tu forma de trabajar.”
+
+“Evitas sanciones y auditorías sorpresa por uso de software no homologado.”
+
+“Migración sencilla desde tu ERP actual o desde Excel.”
+
+CTA en color de alerta:
+“Asegura tu cumplimiento Verifactu hoy”
+
+Interfaz
+
+Sección con fondo ligeramente distinto (amarillo/ámbar suave) para transmitir urgencia.
+
+A la derecha, una caja “timeline” simple con hitos:
+
+“Hoy: puedes prepararte con calma.”
+
+“2026: Verifactu entra en vigor.”
+
+“Después: sanciones por software de facturación no adaptado.”
+
+Repite el badge “Compatible Verifactu 2026” visible.
+
+4. Sección de beneficios + “cómo se siente usarlo”
+No solo features, traduce a resultados.
+
+Título (H2)
+“De facturas sueltas a control total de tu negocio”
+
+Divide en 3 columnas, cada una con un beneficio principal:
+
+Menos tareas administrativas
+
+“Centraliza facturas, gastos y clientes en un solo panel.”
+
+“Olvídate de teclear tickets: súbelos con el móvil y deja que el OCR trabaje.”
+
+“Busca cualquier factura, cliente o importe desde el buscador global (Cmd/Ctrl+K).”
+
+Control financiero en tiempo real
+
+“Dashboard con facturación, gastos y beneficio actualizado.”
+
+“IVA e IRPF estimados antes de llegar al trimestre.”
+
+“Conciliación bancaria (cuando la tengas) para saber qué hay realmente en caja.”
+
+Mejor relación con tus clientes
+
+“Pipeline de ventas para no olvidar ninguna oportunidad.”
+
+“Presupuestos profesionales y facturas en un clic.”
+
+“Portal cliente para descargar facturas y pagar online sin perseguirles.”
+
+Interfaz
+
+Tres columnas con icono/ilustración + título + 2 o 3 bullets.
+
+Debajo otra franja con una captura panorámica del dashboard completo.
+
+5. Trust signals (prueba social + seguridad + cumplimiento)
+Incluso si no tienes aún grandes números, maqueta el hueco preparado.
+
+Título (H2)
+“Confianza, seguridad y cumplimiento por diseño”
+
+Elementos:
+
+Logos (cuando los tengas): fila de 4–6 logos de asesorías/empresas tipo “Ya confían en VerifacTool”.
+
+Badge:
+
+“Compatible Verifactu 2026 (Ley Antifraude España)”
+
+“Datos cifrados en tránsito y en reposo”
+
+“Backups diarios automáticos”
+
+Mini‑bloque “para asesores/contables”:
+
+“Acceso específico para asesorías con permisos de solo lectura.”
+
+“Exporta listados e informes para tus cierres contables.”
+
+CTA mini: “Soy asesor, quiero más info”.
+
+Interfaz
+
+Sección limpia, poco texto, centrada.
+
+Incluye pequeños iconos de candado, escudo, etc., pero sin recargar.
+
+6. Sección de planes / precios (teaser hacia /precios)
+No hace falta meter todos los detalles, pero sí orientarlos al siguiente paso.
+
+Título (H2)
+“Elige el plan que mejor encaja con tu negocio”
+
+Breve texto:
+“Empieza gratis y paga solo cuando tu facturación y equipo lo necesiten.”
+
+Tabla muy simple con 2–3 columnas (ejemplo):
+
+“Autónomos”
+
+“Pymes”
+
+“Asesorías”
+
+Cada columna: 3 bullets de valor + botón “Ver precios completos → /precios”.
+
+Interfaz
+
+Tabla de pricing clásica, plan recomendado resaltado.
+
+En el hero y en esta sección, mismo texto de CTA “Empieza gratis”.
+
+7. FAQ orientado a objeciones (y FAQ Schema)
+Aquí atacas keywords long tail y objeciones típicas.
+
+Título (H2)
+“Preguntas frecuentes sobre Verifactu y VerifacTool”
+
+Ejemplos de preguntas (H3) + respuesta corta:
+
+“¿Qué es Verifactu y por qué necesito un software compatible?”
+
+“¿VerifacTool cumple la normativa Verifactu de la AEAT?”
+
+“¿Puedo migrar mis datos desde Excel u otro programa de facturación?”
+
+“¿VerifacTool sirve tanto para autónomos como para pymes?”
+
+“¿Necesito ser contable para usar el módulo de gastos e impuestos?”
+
+“¿Puedo invitar a mi asesor para que revise mis datos?”
+
+A nivel SEO, estas FAQs te permiten meter variaciones: “software verifactu”, “programa facturación verifactu”, “software facturación online España”, “verifactool”.
+
+Interfaz
+
+Acordeones (pregunta → clic → se despliega la respuesta).
+
+Añade un CTA final: “¿Tienes otra duda? Reserva una llamada” o link a soporte.
+
+8. Footer
+Además de lo típico legal, aquí aseguras el enlazado interno.
+
+Debe incluir enlaces visibles a:
+
+“Software Verifactu” → /software-verifactu
+
+“Verifactu: qué es y cómo cumplir” → /verifactu
+
+“Software de contabilidad online” → /software-contabilidad-online
+
+“Precios” → /precios
+
+“Blog” (si lo tienes)
+
+Legal: Aviso legal, Política de privacidad, Cookies.
+
+9. SEO On‑Page concreto
+Title (≤70 caracteres)
+“Software de Facturación Verifactu Online | VerifacTool”
+
+Meta description (con CTA)
+“VerifacTool es el software de facturación Verifactu para autónomos y pymes en España. Cumple la normativa, controla gastos e impuestos y automatiza tus cobros. Empieza gratis hoy.”
+
+Etiquetas de encabezado
+
+H1: “Software de facturación Verifactu para autónomos y pymes”
+
+H2 sugeridos:
+
+“Mucho más que Verifactu: tu mini‑ERP online”
+
+“Verifactu será obligatorio en 2026: evita sanciones”
+
+“De facturas sueltas a control total de tu negocio”
+
+“Confianza, seguridad y cumplimiento por diseño”
+
+“Preguntas frecuentes sobre Verifactu y VerifacTool”
+
+Keywords en el texto
+
+Inserta de forma natural:
+
+“software verifactu”
+
+“programa de facturación verifactu”
+
+“software de facturación online en España”
+
+“VerifacTool”
+
+10. Schemas JSON‑LD (resumen de qué debes implementar)
+No te pongo el JSON completo para no alargar, pero sí los campos clave que debe tener cada uno en la home /:
+
+SoftwareApplication
+
+@type: "SoftwareApplication"
+
+name: "VerifacTool"
+
+applicationCategory: "BusinessApplication"
+
+operatingSystem: "Web"
+
+description: alineada con la meta description.
+
+offers: información básica de precios (mínimo plan más bajo / prueba gratis).
+
+url: "https://tudominio.com/"
+
+FAQPage
+
+@type: "FAQPage"
+
+mainEntity: array de preguntas/respuestas de la sección FAQ.
+
+BreadcrumbList
+
+Para la home es sencillo, pero así dejas la estructura para el resto:
+
+itemListElement con:
+
+position: 1
+
+name: "Inicio"
+
+item: "https://tudominio.com/"
+
+WebSite + SiteLinksSearchBox
+
+@type: "WebSite"
+
+name: "VerifacTool"
+
+url: "https://tudominio.com/"
+
+potentialAction de tipo SearchAction con el patrón de búsqueda (ej. https://tudominio.com/?s={search_term_string}).
+
+Meta / OG tags
+
+Canonical: https://tudominio.com/
+
+OG:
+
+og:title: igual o muy similar al title.
+
+og:description: cercana a meta description.
+
+og:image: 1200×630 (mockup de tu dashboard).
+
+og:url: home.
+
+---
+
+## 5. Especificaciones CSS (Para Desarrolladores)
+
+Aquí tienes los snippets clave para lograr este look "Blue Professional":
+
+codeCSS
+
+`:root {
+  --primary-blue: #2563EB;
+  --primary-hover: #1D4ED8;
+  --text-main: #1E293B;
+  --text-muted: #64748B;
+  --bg-gradient: radial-gradient(50% 50% at 50% 10%, #E0F2FE 0%, #FFFFFF 100%);
+  --radius-xl: 32px; /* Para secciones grandes y tarjetas */
+  --radius-pill: 9999px; /* Para botones */
+}
+
+/* El fondo del Hero Section */
+.hero-section {
+  background: var(--bg-gradient);
+}
+
+/* Tarjetas de Features (Estilo FlowSync adaptado) */
+.feature-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  border: 1px solid #F1F5F9;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -5px rgba(37, 99, 235, 0.1); /* Sombra azulada sutil */
+  border-color: #BFDBFE;
+}
+
+/* Botón Principal */
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: white;
+  border-radius: var(--radius-pill);
+  padding: 12px 32px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Títulos con ligero degradado (Opcional, muy moderno) */
+h1.hero-title {
+  background: linear-gradient(to right, #1E293B 0%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}`
+
+### Resumen
+
+El diseño web será **extremadamente limpio, con mucho aire (whitespace)**. El color azul actuará como el hilo conductor de "profesionalidad", apareciendo en botones, iconos y sombras sutiles, mientras que la estructura de bordes redondeados grandes (32px) mantendrá la web amigable y moderna, idéntica a la referencia de FlowSync pero adaptada a tu marca.

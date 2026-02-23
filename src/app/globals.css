@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Palette around #00475b (Deep Petrol/Teal) */
+  --color-primary: #00475b;
+  /* Base Logo Color */
+  --color-primary-hover: #003646;
+  /* Shaded primary */
+  --color-navy: #001a21;
+  /* Darkest petrol */
+  --color-text-body: #475569;
+  /* Slate 600 */
+  --color-success: #10B981;
+  /* Emerald 500 */
+  --color-accent-blue: #f0f8fa;
+  /* Very light petrol tint */
+
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #001a21;
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+  --primary: #00475b;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-section {
+  /* Gradient from light tinted background to white */
+  background: radial-gradient(circle at 50% 0%, #e0eff2 0%, #FFFFFF 60%);
+}
+
+.feature-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  border: 1px solid #F1F5F9;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -5px rgba(0, 71, 91, 0.1);
+  border-color: #00475b20;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-pill);
+  padding: 12px 32px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 71, 91, 0.2);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  padding: 12px 32px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent-blue);
+  transform: scale(1.02);
+}
+
+.hero-title {
+  color: var(--color-navy);
+}
+
+.text-navy {
+  color: var(--color-navy);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+.bg-accent-blue {
+  background-color: var(--color-accent-blue);
+}
+
+/* Fix for background-clip lint */
+.bg-clip-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
