@@ -168,31 +168,28 @@ export default function ContabilidadPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                         {[
                             {
-                                title: "Gestión Gastos + OCR",
-                                desc: "Drag & drop tickets → extracción automática. Categorización inteligente.",
-                                icon: <Smartphone size={24} />,
-                                link: "/ocr-facturas-proveedores",
+                                link: "#",
                                 linkText: "Saber más"
                             },
                             {
                                 title: "Modelo 303 Automático",
                                 desc: "Cálculo real-time IVA repercutido/soportado. Borrador AEAT listo.",
                                 icon: <BarChart3 size={24} />,
-                                link: "/modelo-303-automatico",
+                                link: "#",
                                 linkText: "Ver IVA"
                             },
                             {
                                 title: "Modelo 130 Autónomos",
                                 desc: "IRPF estimado + pagos fraccionados automáticos. Exporta PDF.",
                                 icon: <CircleDollarSign size={24} />,
-                                link: "/modelo-130-autonomos",
+                                link: "#",
                                 linkText: "Gestionar IRPF"
                             },
                             {
                                 title: "Conciliación Bancaria",
                                 desc: "API PSD2 bancos españoles. Match automático 85% movimientos.",
                                 icon: <Landmark size={24} />,
-                                link: "/conciliacion-bancaria-automatica",
+                                link: "#",
                                 linkText: "Ver bancos"
                             },
                             {
@@ -307,13 +304,13 @@ export default function ContabilidadPage() {
                             {
                                 q: "¿VerifacTool genera modelo 303 automáticamente?",
                                 a: "Sí, calcula IVA trimestral desde facturas/gastos. Borrador oficial AEAT.",
-                                link: "/modelo-303-automatico",
+                                link: "#",
                                 linkText: "Ver más"
                             },
                             {
                                 q: "¿Cómo funciona OCR facturas proveedores?",
                                 a: "Foto ticket → extrae NIF/IVA/total en 5s. 95% precisión.",
-                                link: "/ocr-facturas-proveedores",
+                                link: "#",
                                 linkText: "Ver OCR"
                             },
                             {

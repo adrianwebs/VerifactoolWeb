@@ -30,6 +30,9 @@ export const metadata: Metadata = {
         type: "article",
         images: ["/og-timeline-verifactu.jpg"],
     },
+    alternates: {
+        canonical: "https://verifactool.com/verifactu/cuando-entra-en-vigor",
+    },
 };
 
 export default function CuandoEntraEnVigorVerifactu() {

@@ -33,6 +33,9 @@ export const metadata: Metadata = {
         type: "article",
         images: ["/og-software-verifactu-comparativa.jpg"],
     },
+    alternates: {
+        canonical: "https://verifactool.com/verifactu/software-compatible",
+    },
 };
 
 export default function SoftwareCompatibleVerifactu() {

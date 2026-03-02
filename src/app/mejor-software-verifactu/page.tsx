@@ -44,7 +44,7 @@ const softwares = [
         cons: ["Precio elevado", "Configuración Verifactu externa"],
         score: "9.2/10",
         bestFor: "Empresas que necesitan gestión integral",
-        href: "/verifactool-vs-holded",
+        href: "#",
         isWinner: false
     },
     {
@@ -55,7 +55,7 @@ const softwares = [
         cons: ["Curva de aprendizaje alta", "Interfaz anticuada", "Costes de implementación"],
         score: "8.5/10",
         bestFor: "Empresas con contabilidad muy compleja",
-        href: "/verifactool-vs-sage",
+        href: "#",
         isWinner: false
     }
 ];

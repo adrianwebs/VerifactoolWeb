@@ -33,6 +33,9 @@ export const metadata: Metadata = {
         type: "article",
         images: ["/og-errores-verifactu.jpg"],
     },
+    alternates: {
+        canonical: "https://verifactool.com/verifactu/errores-comunes",
+    },
 };
 
 export default function ErroresComunesVerifactu() {

@@ -475,7 +475,7 @@ export default function VerifactuPage() {
 
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-8 text-white/60 text-sm">
                             <p>⏰ 18 meses para obligación legal</p>
-                            <Link href="/demo-personalizada" className="text-white font-bold hover:underline flex items-center gap-2">
+                            <Link href="/demo" className="text-white font-bold hover:underline flex items-center gap-2">
                                 📅 Reserva demo personalizada
                             </Link>
                         </div>

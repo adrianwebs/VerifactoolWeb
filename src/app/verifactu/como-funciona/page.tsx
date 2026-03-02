@@ -34,6 +34,9 @@ export const metadata: Metadata = {
         type: "article",
         images: ["/og-como-funciona-verifactu.jpg"],
     },
+    alternates: {
+        canonical: "https://verifactool.com/verifactu/como-funciona",
+    },
 };
 
 export default function ComoFuncionaVerifactu() {

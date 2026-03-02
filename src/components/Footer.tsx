@@ -58,7 +58,7 @@ const Footer = () => {
                             <li><Link href="/verifactool-vs-holded" className="text-text-body hover:text-primary transition-colors text-[15px]">VerifacTool vs Holded</Link></li>
                             <li><Link href="/verifactool-vs-facturadirecta" className="text-text-body hover:text-primary transition-colors text-[15px]">VerifacTool vs FacturaDirecta</Link></li>
                             <li><Link href="/mejor-software-facturacion-verifactu" className="text-text-body hover:text-primary transition-colors text-[15px]">Mejor Software Verifactu</Link></li>
-                            <li><Link href="/demo" className="text-primary font-bold hover:underline transition-colors text-[15px]">Probar gratis 7 días</Link></li>
+                            <li><Link href="#" className="text-primary font-bold hover:underline transition-colors text-[15px]">Probar gratis 7 días</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -68,9 +68,9 @@ const Footer = () => {
                         © {currentYear} VerifacTool. Todos los derechos reservados. Cumplimiento Verifactu garantizado.
                     </p>
                     <div className="flex gap-8">
-                        <Link href="/privacidad" className="text-text-body hover:text-primary transition-colors text-[13px]">Privacidad</Link>
-                        <Link href="/cookies" className="text-text-body hover:text-primary transition-colors text-[13px]">Cookies</Link>
-                        <Link href="/legal" className="text-text-body hover:text-primary transition-colors text-[13px]">Aviso Legal</Link>
+                        <Link href="#" className="text-text-body hover:text-primary transition-colors text-[13px]">Privacidad</Link>
+                        <Link href="#" className="text-text-body hover:text-primary transition-colors text-[13px]">Cookies</Link>
+                        <Link href="#" className="text-text-body hover:text-primary transition-colors text-[13px]">Aviso Legal</Link>
                     </div>
                 </div>
             </div>

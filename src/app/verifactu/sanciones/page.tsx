@@ -31,6 +31,9 @@ export const metadata: Metadata = {
         url: "https://verifactool.com/verifactu/sanciones",
         type: "article",
     },
+    alternates: {
+        canonical: "https://verifactool.com/verifactu/sanciones",
+    },
 };
 
 export default function SancionesVerifactu() {

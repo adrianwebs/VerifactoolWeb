@@ -32,6 +32,9 @@ export const metadata: Metadata = {
         type: "article",
         images: ["/og-verifactu-autonomos.jpg"],
     },
+    alternates: {
+        canonical: "https://verifactool.com/verifactu/es-obligatorio-autonomos",
+    },
 };
 
 export default function EsObligatorioAutonomosVerifactu() {

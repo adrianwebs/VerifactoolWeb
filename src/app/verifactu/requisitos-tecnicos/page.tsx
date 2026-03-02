@@ -33,6 +33,9 @@ export const metadata: Metadata = {
         type: "article",
         images: ["/og-requisitos-verifactu.jpg"],
     },
+    alternates: {
+        canonical: "https://verifactool.com/verifactu/requisitos-tecnicos",
+    },
 };
 
 export default function RequisitosTecnicosVerifactu() {

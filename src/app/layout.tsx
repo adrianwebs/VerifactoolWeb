@@ -9,8 +9,35 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "VerifacTool - Gestión ERP para Verifactu",
-  description: "La solución definitiva para tu Facturación y Cumplimiento Verifactu",
+  metadataBase: new URL("https://verifactool.com"),
+  title: {
+    default: "VerifacTool - Gestión ERP para Verifactu",
+    template: "%s | VerifacTool"
+  },
+  description: "La solución definitiva para tu Facturación y Cumplimiento Verifactu para autónomos y pymes en España.",
+  alternates: {
+    canonical: "./",
+  },
+  openGraph: {
+    title: "VerifacTool - Gestión ERP para Verifactu",
+    description: "La solución definitiva para tu Facturación y Cumplimiento Verifactu para autónomos y pymes en España.",
+    url: "https://verifactool.com",
+    siteName: "VerifacTool",
+    locale: "es_ES",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "VerifacTool - Gestión ERP para Verifactu",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

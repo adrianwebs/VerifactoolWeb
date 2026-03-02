@@ -41,10 +41,10 @@ const Navbar = () => {
                     icon: <Rocket className="text-primary" size={18} />,
                     links: [
                         { name: "Software Verifactu", href: "/software-verifactu" },
-                        { name: "Facturación electrónica", href: "/facturacion-electronica" },
-                        { name: "Facturación recurrente", href: "/facturacion-recurrente" },
-                        { name: "Programa para autónomos", href: "/programa-facturacion-autonomos" },
-                        { name: "Programa para pymes", href: "/programa-facturacion-pymes" },
+                        { name: "Facturación electrónica", href: "#" },
+                        { name: "Facturación recurrente", href: "#" },
+                        { name: "Programa para autónomos", href: "#" },
+                        { name: "Programa para pymes", href: "#" },
                     ]
                 },
                 {
@@ -52,20 +52,20 @@ const Navbar = () => {
                     icon: <Calculator className="text-primary" size={18} />,
                     links: [
                         { name: "Software contabilidad online", href: "/software-contabilidad-online" },
-                        { name: "Modelo 303 automático", href: "/modelo-303-automatico" },
-                        { name: "Modelo 130 autónomos", href: "/modelo-130-autonomos" },
-                        { name: "Contabilidad para autónomos", href: "/contabilidad-autonomos" },
+                        { name: "Modelo 303 automático", href: "#" },
+                        { name: "Modelo 130 autónomos", href: "#" },
+                        { name: "Contabilidad para autónomos", href: "#" },
                     ]
                 },
                 {
                     title: "Automatización",
                     icon: <Zap className="text-primary" size={18} />,
                     links: [
-                        { name: "Conciliación bancaria", href: "/software-conciliacion-bancaria" },
-                        { name: "OCR facturas proveedores", href: "/ocr-facturas-proveedores" },
-                        { name: "CRM asesorías", href: "/software-crm-asesorias" },
-                        { name: "Portal del cliente", href: "/portal-cliente" },
-                        { name: "Integraciones / API", href: "/api-docs" },
+                        { name: "Conciliación bancaria", href: "#" },
+                        { name: "OCR facturas proveedores", href: "#" },
+                        { name: "CRM asesorías", href: "#" },
+                        { name: "Portal del cliente", href: "#" },
+                        { name: "Integraciones / API", href: "#" },
                     ]
                 }
             ]
@@ -77,9 +77,9 @@ const Navbar = () => {
                     title: "Por tipo de negocio",
                     icon: <Briefcase className="text-primary" size={18} />,
                     links: [
-                        { name: "Para autónomos", href: "/programa-facturacion-autonomos" },
-                        { name: "Para pymes", href: "/programa-facturacion-pymes" },
-                        { name: "Para asesorías", href: "/software-crm-asesorias" },
+                        { name: "Para autónomos", href: "#" },
+                        { name: "Para pymes", href: "#" },
+                        { name: "Para asesorías", href: "#" },
                     ]
                 },
                 {
@@ -89,7 +89,7 @@ const Navbar = () => {
                         { name: "Cumplir con Verifactu", href: "/software-verifactu" },
                         { name: "Automatizar impuestos", href: "/software-contabilidad-online" },
                         { name: "Evitar sanciones", href: "/verifactu/sanciones" },
-                        { name: "Cambiar desde Holded", href: "/verifactool-vs-holded" },
+                        { name: "Cambiar desde Holded", href: "#" },
                     ]
                 }
             ]
@@ -130,9 +130,9 @@ const Navbar = () => {
                     title: "Aprender",
                     icon: <HelpCircle className="text-primary" size={18} />,
                     links: [
-                        { name: "Guía factura electrónica", href: "/facturacion-electronica" },
+                        { name: "Guía factura electrónica", href: "#" },
                         { name: "Cumplimiento Ley Antifraude", href: "/verifactu/requisitos-tecnicos" },
-                        { name: "Cómo automatizar conciliación", href: "/conciliacion-bancaria-automatica" },
+                        { name: "Cómo automatizar conciliación", href: "#" },
                         { name: "FAQ Verifactu", href: "/verifactu#faq" },
                     ]
                 },
@@ -140,18 +140,18 @@ const Navbar = () => {
                     title: "Comparativas",
                     icon: <BarChart2 className="text-primary" size={18} />,
                     links: [
-                        { name: "VerifacTool vs Holded", href: "/verifactool-vs-holded" },
-                        { name: "VerifacTool vs FacturaDirecta", href: "/verifactool-vs-facturadirecta" },
-                        { name: "Mejor software facturación", href: "/mejor-software-facturacion-verifactu" },
+                        { name: "VerifacTool vs Holded", href: "#" },
+                        { name: "VerifacTool vs FacturaDirecta", href: "#" },
+                        { name: "Mejor software facturación", href: "/mejor-software-verifactu" },
                     ]
                 },
                 {
                     title: "Soporte",
                     icon: <Smartphone className="text-primary" size={18} />,
                     links: [
-                        { name: "Centro de ayuda", href: "/ayuda" },
-                        { name: "Documentación API", href: "/api-docs" },
-                        { name: "Release notes", href: "/updates" },
+                        { name: "Centro de ayuda", href: "#" },
+                        { name: "Documentación API", href: "#" },
+                        { name: "Release notes", href: "#" },
                     ]
                 }
             ]

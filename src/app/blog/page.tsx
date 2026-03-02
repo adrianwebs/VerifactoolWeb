@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     title: "Blog sobre Verifactu, Contabilidad y CRM | VerifacTool",
     description:
         "Aprende todo sobre el reglamento Verifactu, cómo digitalizar tu negocio y consejos de contabilidad para autónomos y pymes.",
+    alternates: {
+        canonical: "https://verifactool.com/blog",
+    },
 };
 
 export default function BlogPage() {
