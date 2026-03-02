@@ -9,6 +9,8 @@ import Benefits from "@/components/Benefits";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import JsonLd from "@/components/SEO/JsonLd";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Software de Facturación Verifactu Online | VerifacTool",
@@ -87,6 +89,37 @@ export default function Home() {
       <Pricing />
 
       <FAQ />
+
+      {/* Comparison Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
+                Compara y elige el mejor sistema para tu negocio
+              </h2>
+              <p className="text-text-body text-lg mb-8">
+                ¿Dudas sobre qué software se adapta mejor a tus necesidades? Hemos analizado las principales soluciones del mercado español para ayudarte a decidir con total transparencia.
+              </p>
+              <Link
+                href="/mejor-software-verifactu"
+                className="inline-flex items-center gap-2 text-primary font-bold hover:underline group"
+              >
+                Ver comparativa de los mejores software Verifactu
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+            <div className="md:w-1/2 grid grid-cols-2 gap-4">
+              {["Simplicidad", "Normativa AEAT", "Soporte Local", "Precio Justo"].map((item, i) => (
+                <div key={i} className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm text-center">
+                  <div className="font-bold text-navy mb-1 text-sm">{item}</div>
+                  <div className="text-[10px] text-text-body opacity-70 uppercase tracking-widest font-bold">Factor Clave</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-primary overflow-hidden relative">

@@ -39,7 +39,7 @@ const modules = [
             "Portal cliente para autogestión",
         ],
         icon: <Users className="text-primary" size={24} />,
-        href: "/software-crm",
+        href: "#",
         cta: "Saber más",
     },
     {

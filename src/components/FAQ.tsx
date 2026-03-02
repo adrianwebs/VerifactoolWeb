@@ -96,7 +96,7 @@ const FAQ = () => {
 
                 <div className="mt-16 text-center">
                     <p className="text-text-body mb-6">¿Tienes otra duda?</p>
-                    <Link href="/contacto" className="btn-secondary py-3 px-8">
+                    <Link href="#" className="btn-secondary py-3 px-8">
                         Reserva una llamada de asesoramiento
                     </Link>
                 </div>

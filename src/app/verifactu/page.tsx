@@ -374,9 +374,14 @@ export default function VerifactuPillarPage() {
                                     <p className="text-text-body mb-10 max-w-2xl mx-auto">
                                         No esperes a 2027. **VerifacTool** ya cumple con todos los requisitos del Reglamento Verifactu. Empieza a facturar con seguridad hoy mismo.
                                     </p>
-                                    <Link href="/software-verifactu" className="btn-primary py-4 px-12 text-lg inline-flex items-center gap-3">
-                                        Ver funciones VerifacTool <ArrowRight size={20} />
-                                    </Link>
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                                        <Link href="/software-verifactu" className="btn-primary py-4 px-12 text-lg inline-flex items-center gap-3">
+                                            Ver funciones VerifacTool <ArrowRight size={20} />
+                                        </Link>
+                                        <Link href="/mejor-software-verifactu" className="text-navy font-bold hover:underline py-2 flex items-center gap-2">
+                                            Ver comparativa mejores software <ChevronRight size={16} />
+                                        </Link>
+                                    </div>
                                     <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 opacity-50 grayscale">
                                         {/* Partner logos or features icons */}
                                         <div className="text-navy font-bold text-[10px] uppercase tracking-widest">Hash SHA-256</div>

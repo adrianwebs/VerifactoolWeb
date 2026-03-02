@@ -382,7 +382,7 @@ export default function EsObligatorioAutonomosVerifactu() {
                                         <Link href="/software-verifactu" className="btn-primary py-5 px-12 text-lg font-extrabold rounded-2xl hover:scale-105 transition-all">
                                             🚀 Probar VerifacTool Autónomos
                                         </Link>
-                                        <Link href="/programa-facturacion-autonomos" className="btn-outline border-white/30 text-white hover:bg-white/10 py-5 px-10 text-lg font-bold rounded-2xl">
+                                        <Link href="#" className="btn-outline border-white/30 text-white hover:bg-white/10 py-5 px-10 text-lg font-bold rounded-2xl">
                                             Ver programa específico
                                         </Link>
                                     </div>
