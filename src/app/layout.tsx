@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -47,6 +48,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        <Script
+          defer
+          data-website-id="dfid_ciEE4qZI8R6RyNSVkhsEl"
+          data-domain="verifactool.com"
+          src="https://datafa.st/js/script.js"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         className={`${inter.variable} antialiased`}
       >
@@ -56,3 +66,4 @@ export default function RootLayout({
     </html>
   );
 }
+
