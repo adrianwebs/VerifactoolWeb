@@ -12,102 +12,112 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.7,
     }));
 
+    // Use real fixed dates for static pages instead of new Date()
+    // This prevents Google from seeing every rebuild as a "content update"
     const staticUrls = [
         {
             url: baseUrl,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-15',
             changeFrequency: 'weekly' as const,
             priority: 1,
         },
         {
             url: `${baseUrl}/blog`,
-            lastModified: new Date().toISOString().split('T')[0],
-            changeFrequency: 'daily' as const,
+            lastModified: posts.length > 0
+                ? new Date(posts[0].date).toISOString().split('T')[0]
+                : '2025-03-15',
+            changeFrequency: 'weekly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/software-verifactu`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
         {
             url: `${baseUrl}/software-contabilidad-online`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
         {
             url: `${baseUrl}/precios`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
         {
             url: `${baseUrl}/verifactu`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
         {
             url: `${baseUrl}/verifactu/que-es`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/sanciones`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/requisitos-tecnicos`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/software-compatible`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/cuando-entra-en-vigor`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/errores-comunes`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/es-obligatorio-autonomos`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/como-funciona`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/mejor-software-verifactu`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-15',
             changeFrequency: 'weekly' as const,
             priority: 0.9,
         },
         {
             url: `${baseUrl}/demo`,
-            lastModified: new Date().toISOString().split('T')[0],
+            lastModified: '2025-03-10',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/clientes`,
+            lastModified: '2026-03-26',
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
         },
     ];
 

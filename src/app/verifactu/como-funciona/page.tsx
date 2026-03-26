@@ -60,6 +60,33 @@ export default function ComoFuncionaVerifactu() {
         ]
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo funciona el hash encadenado en Verifactu?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Cada factura genera un hash SHA-256 que incluye los datos de la factura actual más el hash de la factura anterior. Esto crea una cadena criptográfica: si se borra o modifica una factura intermedia, la cadena se rompe y la AEAT lo detecta automáticamente." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué es el código QR de Verifactu?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Es un código QR obligatorio que se incluye en cada factura PDF. Contiene la URL de verificación de la AEAT y los datos clave de la factura, permitiendo que cualquier receptor compruebe su autenticidad escaneándolo con el móvil." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuál es la diferencia entre Verifactu SÍ y Verifactu NO?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Verifactu SÍ envía los registros de facturación a la AEAT automáticamente en tiempo real. Verifactu NO solo almacena los registros localmente con garantías de integridad y los mantiene disponibles para inspección. Ambos cumplen la normativa, pero la AEAT recomienda Verifactu SÍ." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa si se borra una factura en un sistema Verifactu?",
+                "acceptedAnswer": { "@type": "Answer", "text": "El sistema no permite borrar facturas. Si se necesita corregir, se emite una factura rectificativa que queda vinculada a la original. Esto garantiza la trazabilidad completa exigida por el RD 1007/2023." }
+            }
+        ]
+    };
+
     const steps = [
         {
             title: "Emisión de Factura",
@@ -97,6 +124,7 @@ export default function ComoFuncionaVerifactu() {
         <main className="min-h-screen bg-white">
             <JsonLd data={articleSchema} />
             <JsonLd data={breadcrumbSchema} />
+            <JsonLd data={faqSchema} />
 
             <Navbar />
 

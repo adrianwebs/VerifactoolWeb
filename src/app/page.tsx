@@ -128,12 +128,12 @@ export default function Home() {
             Potencia tu flujo de trabajo hoy
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="bg-navy text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-navy/90 transition-all shadow-xl">
+            <Link href="/precios" className="bg-navy text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-navy/90 transition-all shadow-xl inline-block text-center">
               Empezar Prueba Gratuita
-            </button>
-            <button className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+            </Link>
+            <Link href="/demo" className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all inline-block text-center">
               Reservar Demo
-            </button>
+            </Link>
           </div>
         </div>
 

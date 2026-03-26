@@ -17,8 +17,11 @@ export const metadata: Metadata = {
   },
   description: "La solución definitiva para tu Facturación y Cumplimiento Verifactu para autónomos y pymes en España.",
   alternates: {
-    canonical: "./",
+    languages: {
+      "es-ES": "https://verifactool.com",
+    },
   },
+
   openGraph: {
     title: "VerifacTool - Gestión ERP para Verifactu",
     description: "La solución definitiva para tu Facturación y Cumplimiento Verifactu para autónomos y pymes en España.",

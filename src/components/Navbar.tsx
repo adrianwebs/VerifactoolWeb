@@ -41,10 +41,8 @@ const Navbar = () => {
                     icon: <Rocket className="text-primary" size={18} />,
                     links: [
                         { name: "Software Verifactu", href: "/software-verifactu" },
-                        { name: "Facturación electrónica", href: "#" },
-                        { name: "Facturación recurrente", href: "#" },
-                        { name: "Programa para autónomos", href: "#" },
-                        { name: "Programa para pymes", href: "#" },
+                        { name: "Facturación electrónica", href: "/software-verifactu" },
+                        { name: "Programa para autónomos", href: "/verifactu/es-obligatorio-autonomos" },
                     ]
                 },
                 {
@@ -52,20 +50,14 @@ const Navbar = () => {
                     icon: <Calculator className="text-primary" size={18} />,
                     links: [
                         { name: "Software contabilidad online", href: "/software-contabilidad-online" },
-                        { name: "Modelo 303 automático", href: "#" },
-                        { name: "Modelo 130 autónomos", href: "#" },
-                        { name: "Contabilidad para autónomos", href: "#" },
+                        { name: "Contabilidad para autónomos", href: "/software-contabilidad-online" },
                     ]
                 },
                 {
                     title: "Automatización",
                     icon: <Zap className="text-primary" size={18} />,
                     links: [
-                        { name: "Conciliación bancaria", href: "#" },
-                        { name: "OCR facturas proveedores", href: "#" },
-                        { name: "CRM asesorías", href: "#" },
-                        { name: "Portal del cliente", href: "#" },
-                        { name: "Integraciones / API", href: "#" },
+                        { name: "Gestión integral ERP", href: "/software-verifactu" },
                     ]
                 }
             ]
@@ -77,9 +69,8 @@ const Navbar = () => {
                     title: "Por tipo de negocio",
                     icon: <Briefcase className="text-primary" size={18} />,
                     links: [
-                        { name: "Para autónomos", href: "#" },
-                        { name: "Para pymes", href: "#" },
-                        { name: "Para asesorías", href: "#" },
+                        { name: "Para autónomos", href: "/verifactu/es-obligatorio-autonomos" },
+                        { name: "Para pymes", href: "/software-verifactu" },
                     ]
                 },
                 {
@@ -89,7 +80,6 @@ const Navbar = () => {
                         { name: "Cumplir con Verifactu", href: "/software-verifactu" },
                         { name: "Automatizar impuestos", href: "/software-contabilidad-online" },
                         { name: "Evitar sanciones", href: "/verifactu/sanciones" },
-                        { name: "Cambiar desde Holded", href: "#" },
                     ]
                 }
             ]
@@ -130,28 +120,17 @@ const Navbar = () => {
                     title: "Aprender",
                     icon: <HelpCircle className="text-primary" size={18} />,
                     links: [
-                        { name: "Guía factura electrónica", href: "#" },
+                        { name: "Qué es Verifactu", href: "/verifactu/que-es" },
                         { name: "Cumplimiento Ley Antifraude", href: "/verifactu/requisitos-tecnicos" },
-                        { name: "Cómo automatizar conciliación", href: "#" },
-                        { name: "FAQ Verifactu", href: "/verifactu#faq" },
+                        { name: "Errores comunes Verifactu", href: "/verifactu/errores-comunes" },
+                        { name: "Blog", href: "/blog" },
                     ]
                 },
                 {
                     title: "Comparativas",
                     icon: <BarChart2 className="text-primary" size={18} />,
                     links: [
-                        { name: "VerifacTool vs Holded", href: "#" },
-                        { name: "VerifacTool vs FacturaDirecta", href: "#" },
                         { name: "Mejor software facturación", href: "/mejor-software-verifactu" },
-                    ]
-                },
-                {
-                    title: "Soporte",
-                    icon: <Smartphone className="text-primary" size={18} />,
-                    links: [
-                        { name: "Centro de ayuda", href: "#" },
-                        { name: "Documentación API", href: "#" },
-                        { name: "Release notes", href: "#" },
                     ]
                 }
             ]
