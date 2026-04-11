@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/SEO/JsonLd";
@@ -321,7 +321,7 @@ export default function ComoFuncionaVerifactu() {
                                 Olvídate de XML, Hash o normativas técnicas complejos. Nosotros nos encargamos de que toda tu facturación sea 100% compliant.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                                <Link href="/software-verifactu" className="bg-white text-navy px-12 py-5 rounded-2xl font-extrabold text-xl hover:scale-105 transition-transform">
+                                <Link href="/software-facturacion/verifactu" className="bg-white text-navy px-12 py-5 rounded-2xl font-extrabold text-xl hover:scale-105 transition-transform">
                                     🚀 Empezar ahora
                                 </Link>
                                 <Link href="/verifactu/es-obligatorio-autonomos" className="border border-white/30 px-10 py-5 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-colors">

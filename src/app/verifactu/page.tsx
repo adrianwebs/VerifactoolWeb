@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/SEO/JsonLd";
@@ -375,10 +375,10 @@ export default function VerifactuPillarPage() {
                                         No esperes a 2027. **VerifacTool** ya cumple con todos los requisitos del Reglamento Verifactu. Empieza a facturar con seguridad hoy mismo.
                                     </p>
                                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                                        <Link href="/software-verifactu" className="btn-primary py-4 px-12 text-lg inline-flex items-center gap-3">
+                                        <Link href="/software-facturacion/verifactu" className="btn-primary py-4 px-12 text-lg inline-flex items-center gap-3">
                                             Ver funciones VerifacTool <ArrowRight size={20} />
                                         </Link>
-                                        <Link href="/mejor-software-verifactu" className="text-navy font-bold hover:underline py-2 flex items-center gap-2">
+                                        <Link href="/comparativas/mejor-software-facturacion" className="text-navy font-bold hover:underline py-2 flex items-center gap-2">
                                             Ver comparativa mejores software <ChevronRight size={16} />
                                         </Link>
                                     </div>

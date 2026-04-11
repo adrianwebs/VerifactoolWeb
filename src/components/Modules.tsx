@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -15,7 +15,7 @@ const modules = [
             "Envío automático a la AEAT",
         ],
         icon: <FileText className="text-primary" size={24} />,
-        href: "/software-verifactu",
+        href: "/software-facturacion/verifactu",
         cta: "Ver detalles de Verifactu",
     },
     {
@@ -101,7 +101,7 @@ const Modules = () => {
                 </div>
 
                 <div className="text-center">
-                    <Link href="/software-verifactu" className="text-navy font-bold hover:text-primary transition-colors flex items-center justify-center gap-2">
+                    <Link href="/software-facturacion/verifactu" className="text-navy font-bold hover:text-primary transition-colors flex items-center justify-center gap-2">
                         Ver todas las funciones <ArrowRight size={18} />
                     </Link>
                 </div>

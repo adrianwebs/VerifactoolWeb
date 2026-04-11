@@ -40,6 +40,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
+        {
+            url: `${baseUrl}/software-facturacion/autonomos`,
+            lastModified: '2026-04-11',
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/software-facturacion/pymes`,
+            lastModified: '2026-04-11',
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
         // === CONVERSIÓN (BOFU) ===
         {
             url: `${baseUrl}/precios`,
@@ -109,6 +121,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: 'weekly' as const,
             priority: 0.9,
         },
+        {
+            url: `${baseUrl}/comparativas/holded-alternativa`,
+            lastModified: '2026-04-11',
+            changeFrequency: 'weekly' as const,
+            priority: 0.9,
+        },
         // === CONTENIDO ===
         {
             url: `${baseUrl}/blog`,
@@ -131,9 +149,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
         },
         // TODO: Añadir cuando se creen los page.tsx:
-        // /software-facturacion/autonomos
-        // /software-facturacion/pymes
-        // /comparativas/holded-alternativa
         // /comparativas/quipu-alternativa
         // /funcionalidades/facturacion-electronica
         // /recursos/faq-verifactu

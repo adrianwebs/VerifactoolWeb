@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/SEO/JsonLd";
@@ -364,7 +364,7 @@ export default function CuandoEntraEnVigorVerifactu() {
                                 VerifacTool está listo desde julio 2025 para cumplir con todas las fases de Verifactu. Empieza sin prisas ni riesgos.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                                <Link href="/software-verifactu" className="btn-secondary bg-navy text-white hover:bg-navy/80 py-5 px-15 text-xl font-bold rounded-2xl transition-all">
+                                <Link href="/software-facturacion/verifactu" className="btn-secondary bg-navy text-white hover:bg-navy/80 py-5 px-15 text-xl font-bold rounded-2xl transition-all">
                                     🚀 Probar Verifactu Gratis
                                 </Link>
                                 <Link href="/verifactu" className="btn-outline border-white/40 text-white hover:bg-white/10 py-5 px-10 text-xl font-bold rounded-2xl transition-all">

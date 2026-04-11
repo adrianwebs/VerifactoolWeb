@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/SEO/JsonLd";
@@ -379,7 +379,7 @@ export default function EsObligatorioAutonomosVerifactu() {
                                     </div>
 
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                                        <Link href="/software-verifactu" className="btn-primary py-5 px-12 text-lg font-extrabold rounded-2xl hover:scale-105 transition-all">
+                                        <Link href="/software-facturacion/verifactu" className="btn-primary py-5 px-12 text-lg font-extrabold rounded-2xl hover:scale-105 transition-all">
                                             🚀 Probar VerifacTool Autónomos
                                         </Link>
                                         <Link href="#" className="btn-outline border-white/30 text-white hover:bg-white/10 py-5 px-10 text-lg font-bold rounded-2xl">

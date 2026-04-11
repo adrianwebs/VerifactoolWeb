@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/SEO/JsonLd";
@@ -359,7 +359,7 @@ export default function RequisitosTecnicosVerifactu() {
                                         ))}
                                     </div>
 
-                                    <Link href="/software-verifactu" className="btn-secondary bg-white text-navy font-bold py-5 px-12 text-lg inline-flex items-center gap-3 hover:scale-105 transition-transform group">
+                                    <Link href="/software-facturacion/verifactu" className="btn-secondary bg-white text-navy font-bold py-5 px-12 text-lg inline-flex items-center gap-3 hover:scale-105 transition-transform group">
                                         ✅ VerifacTool: software Verifactu homologado <ArrowRight size={20} className="group-hover:translate-x-1" />
                                     </Link>
                                 </div>

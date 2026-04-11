@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -38,7 +38,7 @@ export default function NotFound() {
                     {[
                         { title: "Sanciones", desc: "¿Cuáles son los riesgos?", href: "/verifactu/sanciones" },
                         { title: "Cuándo empieza", desc: "Fechas oficiales 2027", href: "/verifactu/cuando-entra-en-vigor" },
-                        { title: "Software", desc: "Soluciones homologadas", href: "/software-verifactu" }
+                        { title: "Software", desc: "Soluciones homologadas", href: "/software-facturacion/verifactu" }
                     ].map((item, i) => (
                         <Link key={i} href={item.href} className="p-8 rounded-[32px] border border-slate-100 bg-slate-50 hover:border-primary/30 transition-all group">
                             <h4 className="font-bold text-navy mb-2 group-hover:text-primary transition-colors">{item.title}</h4>

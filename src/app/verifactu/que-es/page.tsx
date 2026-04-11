@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/SEO/JsonLd";
@@ -365,7 +365,7 @@ export default function QueEsVerifactu() {
                                         </div>
                                     </div>
 
-                                    <Link href="/software-verifactu" className="btn-primary bg-primary border-none py-5 px-12 text-lg inline-flex items-center gap-3 hover:scale-105 transition-transform">
+                                    <Link href="/software-facturacion/verifactu" className="btn-primary bg-primary border-none py-5 px-12 text-lg inline-flex items-center gap-3 hover:scale-105 transition-transform">
                                         🚀 Prueba VerifacTool gratis <ArrowRight size={20} />
                                     </Link>
                                 </div>
