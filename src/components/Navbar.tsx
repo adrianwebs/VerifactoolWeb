@@ -34,103 +34,112 @@ const Navbar = () => {
 
     const megaMenus: Record<string, MegaMenu> = {
         producto: {
-            label: "Producto",
+            label: "Software",
             columns: [
                 {
-                    title: "Facturación",
-                    icon: <Rocket className="text-primary" size={18} />,
+                    title: "Soluciones",
+                    icon: <Briefcase className="text-primary" size={18} />,
                     links: [
-                        { name: "Software Verifactu", href: "/software-verifactu" },
-                        { name: "Facturación electrónica", href: "/software-verifactu" },
-                        { name: "Programa para autónomos", href: "/verifactu/es-obligatorio-autonomos" },
-                    ]
-                },
-                {
-                    title: "Contabilidad",
-                    icon: <Calculator className="text-primary" size={18} />,
-                    links: [
-                        { name: "Software contabilidad online", href: "/software-contabilidad-online" },
-                        { name: "Contabilidad para autónomos", href: "/software-contabilidad-online" },
+                        { name: "Para Autónomos", href: "/software-facturacion/autonomos" },
+                        { name: "Para PYMES", href: "/software-facturacion/pymes" },
+                        { name: "Para Gestorías", href: "/software-facturacion/gestorias" },
+                        { name: "Multiempresa", href: "/software-facturacion/multiempresa" },
                     ]
                 },
                 {
                     title: "Automatización",
                     icon: <Zap className="text-primary" size={18} />,
                     links: [
-                        { name: "Gestión integral ERP", href: "/software-verifactu" },
-                    ]
-                }
-            ]
-        },
-        soluciones: {
-            label: "Soluciones",
-            columns: [
-                {
-                    title: "Por tipo de negocio",
-                    icon: <Briefcase className="text-primary" size={18} />,
-                    links: [
-                        { name: "Para autónomos", href: "/verifactu/es-obligatorio-autonomos" },
-                        { name: "Para pymes", href: "/software-verifactu" },
+                        { name: "Automatizar Facturas", href: "/software-facturacion/automatizacion" },
+                        { name: "Facturas Recurrentes", href: "/software-facturacion/facturas-recurrentes" },
+                        { name: "Conciliación Bancaria", href: "/software-facturacion/conciliacion-bancaria" },
+                        { name: "API para Proyectos", href: "/software-facturacion/api" },
                     ]
                 },
                 {
-                    title: "Por necesidad",
+                    title: "Verifactu",
                     icon: <ShieldCheck className="text-primary" size={18} />,
                     links: [
-                        { name: "Cumplir con Verifactu", href: "/software-verifactu" },
-                        { name: "Automatizar impuestos", href: "/software-contabilidad-online" },
-                        { name: "Evitar sanciones", href: "/verifactu/sanciones" },
-                    ]
-                }
-            ]
-        },
-        verifactu: {
-            label: "Verifactu",
-            columns: [
-                {
-                    title: "Guía Verifactu",
-                    icon: <FileCheck className="text-primary" size={18} />,
-                    links: [
-                        { name: "Qué es Verifactu", href: "/verifactu/que-es" },
-                        { name: "Cómo funciona", href: "/verifactu/como-funciona" },
-                        { name: "Cuándo entra en vigor", href: "/verifactu/cuando-entra-en-vigor" },
-                        { name: "¿Es obligatorio?", href: "/verifactu/es-obligatorio-autonomos" },
-                    ]
-                },
-                {
-                    title: "Técnico y Legal",
-                    icon: <AlertTriangle className="text-primary" size={18} />,
-                    links: [
-                        { name: "Requisitos técnicos", href: "/verifactu/requisitos-tecnicos" },
-                        { name: "Sanciones", href: "/verifactu/sanciones" },
-                        { name: "Errores comunes", href: "/verifactu/errores-comunes" },
-                        { name: "Software compatible", href: "/verifactu/software-compatible" },
+                        { name: "Software Verifactu", href: "/software-facturacion/verifactu" },
+                        { name: "Qué es Verifactu", href: "/verifactu" },
+                        { name: "Normativa AEAT", href: "/verifactu/requisitos-tecnicos" },
                     ]
                 }
             ],
-            footer: {
-                name: "Software compatible con Verifactu",
-                href: "/software-verifactu"
-            }
+            footer: { name: "Ver todos los planes", href: "/precios" }
+        },
+        funcionalidades: {
+            label: "Funcionalidades",
+            columns: [
+                {
+                    title: "Herramientas Core",
+                    icon: <Rocket className="text-primary" size={18} />,
+                    links: [
+                        { name: "Crear Presupuestos", href: "/funcionalidades/presupuestos" },
+                        { name: "Factura Electrónica", href: "/funcionalidades/facturacion-electronica" },
+                        { name: "Factura QR AEAT", href: "/funcionalidades/qr-verifactu" },
+                    ]
+                },
+                {
+                    title: "Gestión Emprendedora",
+                    icon: <Calculator className="text-primary" size={18} />,
+                    links: [
+                        { name: "Control de Gastos", href: "/funcionalidades/control-gastos" },
+                        { name: "TPV en la Nube", href: "/funcionalidades/tpv" },
+                        { name: "Todas las funciones", href: "/funcionalidades" },
+                    ]
+                }
+            ]
+        },
+        sectores: {
+            label: "Sectores",
+            columns: [
+                {
+                    title: "Especializados",
+                    icon: <Briefcase className="text-primary" size={18} />,
+                    links: [
+                        { name: "Autónomos Construcción", href: "/software-facturacion/autonomos-construccion" },
+                        { name: "Electricistas", href: "/software-facturacion/electricistas" },
+                        { name: "Comercios", href: "/software-facturacion/comercios" },
+                        { name: "Servicios", href: "/software-facturacion/servicios" },
+                    ]
+                }
+            ]
+        },
+        comparativas: {
+            label: "Comparar",
+            columns: [
+                {
+                    title: "Alternativas",
+                    icon: <BarChart2 className="text-primary" size={18} />,
+                    links: [
+                        { name: "Mejor Software 2026", href: "/comparativas/mejor-software-facturacion" },
+                        { name: "Holded vs Quipu", href: "/comparativas/holded-vs-quipu" },
+                        { name: "Alternativa a Holded", href: "/comparativas/holded-alternativa" },
+                        { name: "Alternativa a Quipu", href: "/comparativas/quipu-alternativa" },
+                    ]
+                }
+            ],
+            footer: { name: "Ranking Global", href: "/comparativas" }
         },
         recursos: {
             label: "Recursos",
             columns: [
                 {
-                    title: "Aprender",
+                    title: "Gratis",
                     icon: <HelpCircle className="text-primary" size={18} />,
                     links: [
-                        { name: "Qué es Verifactu", href: "/verifactu/que-es" },
-                        { name: "Cumplimiento Ley Antifraude", href: "/verifactu/requisitos-tecnicos" },
-                        { name: "Errores comunes Verifactu", href: "/verifactu/errores-comunes" },
-                        { name: "Blog", href: "/blog" },
+                        { name: "Plantilla Factura", href: "/recursos/plantilla-factura" },
+                        { name: "Calculadora IVA", href: "/recursos/calculadora-iva" },
                     ]
                 },
                 {
-                    title: "Comparativas",
-                    icon: <BarChart2 className="text-primary" size={18} />,
+                    title: "Aprender",
+                    icon: <FileCheck className="text-primary" size={18} />,
                     links: [
-                        { name: "Mejor software facturación", href: "/mejor-software-verifactu" },
+                        { name: "Glosario Facturación", href: "/recursos/glosario-facturacion" },
+                        { name: "FAQ Verifactu", href: "/recursos/faq-verifactu" },
+                        { name: "Blog de actualidad", href: "/blog" },
                     ]
                 }
             ]

@@ -31,11 +31,11 @@ export const metadata: Metadata = {
         title: "Software de Facturación Verifactu-ready | VerifacTool",
         description: "Programa de facturación Verifactu para España: facturación electrónica legal con QR y AEAT. Empieza gratis hoy.",
         images: ["/og-verifactu-dashboard.jpg"],
-        url: "https://verifactool.com/software-verifactu",
+        url: "https://verifactool.com/software-facturacion/verifactu",
         type: "website",
     },
     alternates: {
-        canonical: "https://verifactool.com/software-verifactu",
+        canonical: "https://verifactool.com/software-facturacion/verifactu",
     }
 };
 
@@ -48,7 +48,7 @@ export default function VerifactuPage() {
         "operatingSystem": "Web PWA",
         "description": "Software de facturación compatible con Verifactu: QR, hash y envío AEAT para autónomos España.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-        "url": "https://verifactool.com/software-verifactu"
+        "url": "https://verifactool.com/software-facturacion/verifactu"
     };
 
     const breadcrumbSchema = {
@@ -64,8 +64,14 @@ export default function VerifactuPage() {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Software Verifactu",
-                "item": "https://verifactool.com/software-verifactu"
+                "name": "Software Facturación",
+                "item": "https://verifactool.com/software-facturacion"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Verifactu",
+                "item": "https://verifactool.com/software-facturacion/verifactu"
             }
         ]
     };

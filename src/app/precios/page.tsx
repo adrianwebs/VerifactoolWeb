@@ -6,11 +6,11 @@ import FAQ from "@/components/FAQ";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Planes y Precios | VerifacTool",
-    description: "Precios transparentes para autónomos, pymes y asesorías. Empieza gratis hoy mismo y cumple con Verifactu.",
+    title: "Precios VerifacTool: Software Verifactu desde 12€/mes | Sin Permanencia",
+    description: "Precios transparentes de VerifacTool: plan Autónomos 15€/mes, Pymes 29€/mes, Asesorías 69€/mes. Compatible Verifactu, prueba gratis 7 días, sin permanencia ni letra pequeña.",
     openGraph: {
-        title: "Planes y Precios | VerifacTool",
-        description: "Encuentra el plan que mejor se adapte a tu negocio. Prueba gratuita de 14 días.",
+        title: "Precios VerifacTool: Software Verifactu desde 12€/mes",
+        description: "Encuentra el plan que mejor se adapte a tu negocio. Prueba gratuita de 7 días sin compromiso.",
         url: "https://verifactool.com/precios",
         siteName: "VerifacTool",
         type: "website",

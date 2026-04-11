@@ -17,10 +17,17 @@ import JsonLd from "@/components/SEO/JsonLd";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-    title: "Los 5 Mejores Software Verifactu del 2026 | Comparativa y Opiniones",
-    description: "Analizamos el mejor software Verifactu para autónomos y pymes. Comparativa de precios, requisitos AEAT y facilidad de uso. Holded vs Sage vs VerifacTool.",
+    title: "Mejor Software Facturación Verifactu 2026: Comparativa Holded vs Quipu vs VerifacTool",
+    description: "Comparativa actualizada del mejor software de facturación compatible con Verifactu en España 2026. VerifacTool vs Holded vs Sage: precios, funciones, compatibilidad AEAT y cuál cumple realmente.",
+    openGraph: {
+        title: "Mejor Software Facturación Verifactu 2026: Comparativa Completa",
+        description: "¿Holded, Quipu o VerifacTool? Compara precios, funciones y compatibilidad Verifactu de los principales software de facturación en España.",
+        url: "https://verifactool.com/comparativas/mejor-software-facturacion",
+        siteName: "VerifacTool",
+        type: "article",
+    },
     alternates: {
-        canonical: "https://verifactool.com/mejor-software-verifactu",
+        canonical: "https://verifactool.com/comparativas/mejor-software-facturacion",
     }
 };
 
@@ -33,7 +40,7 @@ const softwares = [
         cons: ["Enfocado solo a mercado español"],
         score: "9.9/10",
         bestFor: "Cumplir la ley sin complicaciones técnicas",
-        href: "/software-verifactu",
+        href: "/software-facturacion/verifactu",
         isWinner: true
     },
     {
@@ -66,13 +73,37 @@ export default function MejorSoftwareVerifactu() {
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://verifactool.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Mejor Software Verifactu", "item": "https://verifactool.com/mejor-software-verifactu" }
+            { "@type": "ListItem", "position": 2, "name": "Comparativas", "item": "https://verifactool.com/comparativas" },
+            { "@type": "ListItem", "position": 3, "name": "Mejor Software Facturación", "item": "https://verifactool.com/comparativas/mejor-software-facturacion" }
+        ]
+    };
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Es Holded compatible con Verifactu en 2026?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A fecha de abril de 2026, Holded no ha certificado oficialmente su compatibilidad completa con el sistema Verifactu de la AEAT. No genera hash SHA-256 encadenado ni códigos QR verificables en el PDF de las facturas." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué software de facturación es compatible con Verifactu?",
+                "acceptedAnswer": { "@type": "Answer", "text": "VerifacTool es uno de los primeros software de facturación en España en implementar al 100% los requisitos Verifactu: hash SHA-256, QR dinámico verificable por la AEAT, y declaración responsable del RD 1007/2023." }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuál es el mejor software de facturación para autónomos en España?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Para autónomos en España en 2026, VerifacTool ofrece la mejor relación calidad-precio con cumplimiento Verifactu completo desde 15€/mes, incluyendo OCR de tickets, borradores de impuestos y soporte por chat." }
+            }
         ]
     };
 
     return (
         <main className="min-h-screen bg-white">
             <JsonLd data={breadcrumbSchema} />
+            <JsonLd data={faqSchema} />
             <Navbar />
 
             {/* Hero Section */}
@@ -81,7 +112,9 @@ export default function MejorSoftwareVerifactu() {
                     <nav className="flex items-center justify-center gap-2 text-sm font-medium text-primary mb-6" aria-label="Breadcrumb">
                         <Link href="/" className="hover:underline">Inicio</Link>
                         <ChevronRight size={14} />
-                        <span>Mejor Software Verifactu</span>
+                        <Link href="/comparativas" className="hover:underline">Comparativas</Link>
+                        <ChevronRight size={14} />
+                        <span>Mejor Software Facturación</span>
                     </nav>
                     <h1 className="text-4xl md:text-6xl font-extrabold text-navy mb-8 leading-tight max-w-4xl mx-auto">
                         ¿Cuál es el <span className="text-primary">mejor software Verifactu</span> en 2026?

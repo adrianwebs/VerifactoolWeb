@@ -23,10 +23,10 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Sanciones por no cumplir con Verifactu: multas y riesgos reales",
-    description: "Descubre las sanciones por no cumplir con Verifactu: multas de hasta 50.000€ por usar software no homologado, riesgos por perfil y cómo evitarlas con un checklist práctico.",
+    title: "Sanciones Verifactu 2026: Multas de hasta 150.000€ por Incumplimiento",
+    description: "Guía completa de sanciones Verifactu: multas de 50.000€ por software no homologado, 150.000€ para fabricantes. Conoce los riesgos y cómo evitarlos con un checklist práctico.",
     openGraph: {
-        title: "Sanciones por no cumplir con Verifactu: multas y riesgos reales",
+        title: "Sanciones Verifactu 2026: Multas de hasta 150.000€ por Incumplimiento",
         description: "Guía completa sobre las multas de la AEAT por Verifactu. Evita sanciones de hasta 150.000€.",
         url: "https://verifactool.com/verifactu/sanciones",
         type: "article",
@@ -458,7 +458,7 @@ export default function SancionesVerifactu() {
                                         </div>
                                     </div>
 
-                                    <Link href="/software-verifactu" className="btn-primary py-5 px-12 text-lg inline-flex items-center gap-3 hover:scale-105 transition-transform group">
+                                    <Link href="/software-facturacion/verifactu" className="btn-primary py-5 px-12 text-lg inline-flex items-center gap-3 hover:scale-105 transition-transform group">
                                         🚀 Probar software Verifactu compatible <ArrowRight size={20} className="group-hover:translate-x-1" />
                                     </Link>
                                 </div>

@@ -12,106 +12,117 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.7,
     }));
 
-    // Use real fixed dates for static pages instead of new Date()
-    // This prevents Google from seeing every rebuild as a "content update"
+    // SEO-OPTIMIZED SITEMAP: Only include URLs with real content (page.tsx exists)
+    // Phantom URLs (404s) hurt crawl budget — add them back when pages are built
     const staticUrls = [
+        // === PILARES (Máxima prioridad) ===
         {
             url: baseUrl,
-            lastModified: '2025-03-15',
+            lastModified: '2026-04-11',
             changeFrequency: 'weekly' as const,
             priority: 1,
         },
         {
-            url: `${baseUrl}/blog`,
-            lastModified: posts.length > 0
-                ? new Date(posts[0].date).toISOString().split('T')[0]
-                : '2025-03-15',
+            url: `${baseUrl}/verifactu`,
+            lastModified: '2026-04-11',
             changeFrequency: 'weekly' as const,
-            priority: 0.8,
+            priority: 0.9,
         },
         {
-            url: `${baseUrl}/software-verifactu`,
-            lastModified: '2025-03-10',
+            url: `${baseUrl}/software-facturacion`,
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
         {
-            url: `${baseUrl}/software-contabilidad-online`,
-            lastModified: '2025-03-10',
+            url: `${baseUrl}/software-facturacion/verifactu`,
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
+        // === CONVERSIÓN (BOFU) ===
         {
             url: `${baseUrl}/precios`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.9,
         },
         {
-            url: `${baseUrl}/verifactu`,
-            lastModified: '2025-03-10',
+            url: `${baseUrl}/demo`,
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
-            priority: 0.9,
+            priority: 0.8,
         },
+        // === SILO VERIFACTU (Contenido indexado) ===
         {
             url: `${baseUrl}/verifactu/que-es`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/sanciones`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/requisitos-tecnicos`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/software-compatible`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/cuando-entra-en-vigor`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/errores-comunes`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/es-obligatorio-autonomos`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
             url: `${baseUrl}/verifactu/como-funciona`,
-            lastModified: '2025-03-10',
+            lastModified: '2026-04-11',
             changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
+        // === COMPARATIVAS ===
         {
-            url: `${baseUrl}/mejor-software-verifactu`,
-            lastModified: '2025-03-15',
+            url: `${baseUrl}/comparativas/mejor-software-facturacion`,
+            lastModified: '2026-04-11',
             changeFrequency: 'weekly' as const,
             priority: 0.9,
         },
+        // === CONTENIDO ===
         {
-            url: `${baseUrl}/demo`,
-            lastModified: '2025-03-10',
-            changeFrequency: 'monthly' as const,
+            url: `${baseUrl}/blog`,
+            lastModified: posts.length > 0
+                ? new Date(posts[0].date).toISOString().split('T')[0]
+                : '2026-04-11',
+            changeFrequency: 'weekly' as const,
             priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/software-contabilidad-online`,
+            lastModified: '2026-04-11',
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
         },
         {
             url: `${baseUrl}/clientes`,
@@ -119,6 +130,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: 'monthly' as const,
             priority: 0.7,
         },
+        // TODO: Añadir cuando se creen los page.tsx:
+        // /software-facturacion/autonomos
+        // /software-facturacion/pymes
+        // /comparativas/holded-alternativa
+        // /comparativas/quipu-alternativa
+        // /funcionalidades/facturacion-electronica
+        // /recursos/faq-verifactu
     ];
 
     return [...staticUrls, ...blogUrls];

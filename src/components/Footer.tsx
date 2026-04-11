@@ -35,9 +35,9 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-navy mb-8 text-sm uppercase tracking-widest">Producto</h4>
                         <ul className="space-y-4">
-                            <li><Link href="/software-verifactu" className="text-text-body hover:text-primary transition-colors text-[15px]">Software Verifactu</Link></li>
-                            <li><Link href="/software-contabilidad-online" className="text-text-body hover:text-primary transition-colors text-[15px]">Software Contabilidad Online</Link></li>
-                            <li><Link href="#" className="text-text-body hover:text-primary transition-colors text-[15px]">CRM Asesorías</Link></li>
+                            <li><Link href="/software-facturacion/verifactu" className="text-text-body hover:text-primary transition-colors text-[15px]">Software Verifactu</Link></li>
+                            <li><Link href="/software-facturacion" className="text-text-body hover:text-primary transition-colors text-[15px]">Software Facturación Online</Link></li>
+                            <li><Link href="/software-facturacion/gestorias" className="text-text-body hover:text-primary transition-colors text-[15px]">CRM Asesorías</Link></li>
                             <li><Link href="/precios" className="text-text-body hover:text-primary transition-colors text-[15px]">Planes y Precios</Link></li>
                         </ul>
                     </div>
@@ -55,9 +55,9 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-navy mb-8 text-sm uppercase tracking-widest">Comparativas</h4>
                         <ul className="space-y-4">
-                            <li><Link href="#" className="text-text-body hover:text-primary transition-colors text-[15px]">VerifacTool vs Holded</Link></li>
-                            <li><Link href="#" className="text-text-body hover:text-primary transition-colors text-[15px]">VerifacTool vs FacturaDirecta</Link></li>
-                            <li><Link href="/mejor-software-verifactu" className="text-text-body hover:text-primary transition-colors text-[15px]">Mejor Software Verifactu</Link></li>
+                            <li><Link href="/comparativas/holded-vs-quipu" className="text-text-body hover:text-primary transition-colors text-[15px]">VerifacTool vs Holded</Link></li>
+                            <li><Link href="/comparativas/holded-alternativa" className="text-text-body hover:text-primary transition-colors text-[15px]">Alternativa a Holded</Link></li>
+                            <li><Link href="/comparativas/mejor-software-facturacion" className="text-text-body hover:text-primary transition-colors text-[15px]">Mejor Software Facturación</Link></li>
                             <li><Link href="#" className="text-primary font-bold hover:underline transition-colors text-[15px]">Probar gratis 7 días</Link></li>
                         </ul>
                     </div>

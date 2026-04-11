@@ -1,0 +1,1 @@
+import React from "react"; import Navbar from "@/components/Navbar"; import Footer from "@/components/Footer"; export default function RecursosPage() { return ( <main className="min-h-screen"><Navbar /><section className="pt-32 pb-20 container mx-auto px-4 text-center"><h1>Recursos</h1><p>Pronto disponible...</p></section><Footer /></main> ); }

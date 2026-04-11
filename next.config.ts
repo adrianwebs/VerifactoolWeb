@@ -14,6 +14,17 @@ const nextConfig: NextConfig = {
         destination: "/verifactu/que-es",
         permanent: true,
       },
+      // Nuevas Redirecciones para Arquitectura Sitemap v2
+      {
+        source: "/software-verifactu",
+        destination: "/software-facturacion/verifactu",
+        permanent: true,
+      },
+      {
+        source: "/mejor-software-verifactu",
+        destination: "/comparativas/mejor-software-facturacion",
+        permanent: true,
+      },
     ];
   },
 };

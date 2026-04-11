@@ -90,6 +90,39 @@ export default function Home() {
 
       <FAQ />
 
+      {/* SEO: Verifactu Compliance Section — Critical internal links to unblock indexation */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase mb-6 tracking-widest">
+              <ArrowRight size={14} /> Normativa 2026-2027
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-8">
+              Cumple con Verifactu sin complicaciones
+            </h2>
+            <p className="text-lg text-text-body mb-10 leading-relaxed">
+              La <Link href="/verifactu" className="text-primary font-bold hover:underline">normativa Verifactu</Link> obliga a todos los autónomos y pymes en España a utilizar un{" "}
+              <Link href="/software-facturacion" className="text-primary font-bold hover:underline">software de facturación</Link> homologado que garantice la integridad de las facturas. No adaptarse a tiempo implica{" "}
+              <Link href="/verifactu/sanciones" className="text-primary font-bold hover:underline">sanciones de hasta 150.000€</Link>.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link href="/verifactu/que-es" className="group p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-primary transition-all">
+                <h3 className="font-bold text-navy mb-2 group-hover:text-primary transition-colors">¿Qué es Verifactu?</h3>
+                <p className="text-sm text-text-body">Guía completa de la normativa AEAT y cómo afecta a tu negocio.</p>
+              </Link>
+              <Link href="/verifactu/requisitos-tecnicos" className="group p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-primary transition-all">
+                <h3 className="font-bold text-navy mb-2 group-hover:text-primary transition-colors">Requisitos técnicos</h3>
+                <p className="text-sm text-text-body">Hash SHA-256, QR verificable y SIF homologado.</p>
+              </Link>
+              <Link href="/verifactu/cuando-entra-en-vigor" className="group p-6 bg-slate-50 rounded-3xl border border-slate-100 hover:border-primary transition-all">
+                <h3 className="font-bold text-navy mb-2 group-hover:text-primary transition-colors">Calendario 2026-2027</h3>
+                <p className="text-sm text-text-body">Fechas clave y plazos para empresas y autónomos.</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Section */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 md:px-6">
@@ -102,10 +135,10 @@ export default function Home() {
                 ¿Dudas sobre qué software se adapta mejor a tus necesidades? Hemos analizado las principales soluciones del mercado español para ayudarte a decidir con total transparencia.
               </p>
               <Link
-                href="/mejor-software-verifactu"
+                href="/comparativas/mejor-software-facturacion"
                 className="inline-flex items-center gap-2 text-primary font-bold hover:underline group"
               >
-                Ver comparativa de los mejores software Verifactu
+                Ver comparativa de los mejores software facturación
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
