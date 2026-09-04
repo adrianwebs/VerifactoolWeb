@@ -15,10 +15,10 @@ const Urgency = () => {
                             <AlertTriangle size={16} /> Deadline Regulatorio
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
-                            Verifactu será obligatorio en 2026: evita sanciones y cambios de última hora
+                            Verifactu será obligatorio en 2027: prepárate con margen, no a última hora
                         </h2>
                         <p className="text-lg text-text-body mb-8 leading-relaxed">
-                            La nueva normativa Verifactu obligará a todos los programas de facturación en España a registrar y encadenar cada factura, enviar la información a la AEAT y garantizar la inalterabilidad de los datos. Si tu software no está adaptado, te arriesgas a sanciones y a tener que migrar deprisa y corriendo.
+                            El RD-ley 15/2025 aplazó Verifactu al <strong>1 de enero de 2027</strong> para sociedades y al <strong>1 de julio de 2027</strong> para autónomos. La norma no cambia: cada factura debe registrarse, encadenarse y quedar inalterable. Lo único que has ganado es tiempo para migrar con calma en vez de a la carrera.
                         </p>
 
                         <div className="space-y-4 mb-8">
@@ -46,24 +46,30 @@ const Urgency = () => {
                                 <div className="relative pl-10">
                                     <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-white border-4 border-amber-400 z-10" />
                                     <p className="font-bold text-navy">Hoy</p>
-                                    <p className="text-sm text-text-body">Puedes prepararte con calma y digitalizar tu negocio.</p>
+                                    <p className="text-sm text-text-body">Adopción voluntaria y sin sanciones. El mejor momento para migrar sin prisa.</p>
                                 </div>
-                                <div className="relative pl-10 opacity-70">
+                                <div className="relative pl-10 opacity-80">
                                     <div className="absolute left-2.5 top-1 w-1 h-20 bg-amber-400 rotate-0 -z-0" />
                                     <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-amber-400 border-4 border-white z-10" />
-                                    <p className="font-bold text-navy">2026</p>
-                                    <p className="text-sm text-text-body">Entrada en vigor obligatoria de Verifactu.</p>
+                                    <p className="font-bold text-navy">1 enero 2027</p>
+                                    <p className="text-sm text-text-body">Obligatorio para sociedades (SL, SA y demás sujetos al Impuesto sobre Sociedades).</p>
+                                </div>
+
+                                <div className="relative pl-10 opacity-80">
+                                    <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-amber-500 border-4 border-white z-10" />
+                                    <p className="font-bold text-navy">1 julio 2027</p>
+                                    <p className="text-sm text-text-body">Obligatorio para autónomos en estimación directa y demás obligados fuera del SII.</p>
                                 </div>
                                 <div className="relative pl-10 opacity-50">
                                     <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-red-400 border-4 border-white z-10" />
                                     <p className="font-bold text-red-600">Después</p>
-                                    <p className="text-sm text-text-body">Sanciones por software de facturación no adaptado.</p>
+                                    <p className="text-sm text-text-body">Sanciones por usar software de facturación no adaptado.</p>
                                 </div>
                             </div>
 
                             <div className="mt-10 p-4 rounded-2xl bg-success/5 border border-success/20 flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-full bg-success flex items-center justify-center text-white font-bold text-xs uppercase">100%</div>
-                                <p className="text-sm font-semibold text-success">VerifacTool ya es compatible</p>
+                                <p className="text-sm font-semibold text-success">VerifacTool ya emite en formato Verifactu</p>
                             </div>
                         </div>
                     </div>

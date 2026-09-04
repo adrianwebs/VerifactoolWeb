@@ -7,56 +7,61 @@ import Link from "next/link";
 
 const plans = [
     {
-        name: "Starter",
-        price: "15€",
+        name: "Autónomo",
+        price: "12,90€",
         period: "/mes",
-        description: "El gancho perfecto para cumplir la ley sin complicaciones.",
+        yearly: "129€/año — dos meses gratis",
+        description: "Cumple Verifactu y lleva el control de tu negocio con un solo NIF.",
         features: [
-            { text: "Facturación Verifactu ilimitada (QR + Hash)", included: true },
-            { text: "Clientes ilimitados", included: true },
-            { text: "Plantillas PDF básicas", included: true },
-            { text: "Envío automático por email", included: true },
-            { text: "Entrada de gastos manual (Sin OCR)", included: false },
-            { text: "Sin conciliación bancaria", included: false },
-            { text: "Sin generación de modelos impuestos", included: false },
+            { text: "Facturas y presupuestos ilimitados", included: true },
+            { text: "Registro Veri*Factu en la AEAT con QR", included: true },
+            { text: "Clientes y proveedores ilimitados", included: true },
+            { text: "PDF con tu logo y envío por email", included: true },
+            { text: "Registro manual de gastos por categoría", included: true },
+            { text: "Facturas rectificativas y anulaciones", included: true },
         ],
-        buttonText: "Prueba 14 días Gratis",
+        soon: ["Gastos con OCR", "Modelos 303 y 130"],
+        buttonText: "Prueba 14 días gratis",
         popular: false,
-        href: "/demo?plan=starter",
+        href: "/demo?plan=autonomo",
     },
     {
-        name: "Growth",
-        price: "29€",
+        name: "Negocio",
+        price: "24,90€",
         period: "/mes",
-        description: "La herramienta de gestión real para negocios que crecen.",
+        yearly: "249€/año — dos meses gratis",
+        description: "Para pymes con equipo que además quieren cerrar el círculo fiscal.",
         features: [
-            { text: "Todo lo del plan Starter", included: true },
-            { text: "Gastos con OCR (Lectura automática)", included: true },
-            { text: "Conciliación bancaria automática", included: true },
-            { text: "Modelos 303 y 130 autorellenos", included: true },
-            { text: "CRM Pro: Portal y Pagos Online", included: true },
-            { text: "Soporte Prioritario", included: true },
+            { text: "Todo lo del plan Autónomo", included: true },
+            { text: "Hasta 5 usuarios con permisos", included: true },
+            { text: "Acceso de solo lectura para tu asesor", included: true },
+            { text: "Series de facturación personalizadas", included: true },
+            { text: "Exportación de libros registro", included: true },
+            { text: "Soporte prioritario", included: true },
         ],
-        buttonText: "Prueba 14 días Gratis",
+        soon: ["Gastos con OCR", "Modelos 303, 130 y 347", "Conciliación bancaria"],
+        buttonText: "Prueba 14 días gratis",
         popular: true,
-        href: "/demo?plan=growth",
+        href: "/demo?plan=negocio",
     },
     {
-        name: "Asesorías",
-        price: "69€",
-        period: "/mes",
-        description: "Control centralizado para gestionar a todos tus clientes.",
+        name: "Asesoría",
+        price: "6,90€",
+        period: "/NIF al mes",
+        yearly: "Mínimo 10 NIF — desde 69€/mes",
+        description: "Todos tus clientes y su estado con la AEAT en una sola pantalla.",
         features: [
-            { text: "Multi-tenant: Todos tus clientes", included: true },
-            { text: "Visión fiscal consolidada", included: true },
-            { text: "Exportación a A3 / Contasol", included: true },
-            { text: "White-label (Tu marca)", included: true },
-            { text: "API para integraciones", included: true },
-            { text: "Gestor de cuenta dedicado", included: true },
+            { text: "Cambio de NIF sin cerrar sesión", included: true },
+            { text: "Consola Verifactu de todos tus clientes", included: true },
+            { text: "Alta y baja de NIF cuando la necesites", included: true },
+            { text: "Usuarios ilimitados de tu despacho", included: true },
+            { text: "Exportación consolidada en Excel", included: true },
+            { text: "Onboarding y migración acompañados", included: true },
         ],
-        buttonText: "Contactar Ventas",
+        soon: ["Exportación a A3 y Contasol", "API para integraciones"],
+        buttonText: "Hablamos 20 minutos",
         popular: false,
-        href: "/demo?plan=asesorias",
+        href: "/demo?plan=asesoria",
     },
 ];
 
@@ -69,7 +74,7 @@ const Pricing = () => {
                         Elige el plan que mejor encaja con tu negocio
                     </h2>
                     <p className="text-text-body text-lg">
-                        Empieza gratis y paga solo cuando tu facturación y equipo lo necesiten.
+                        14 días de prueba sin tarjeta y sin permanencia. Lo que está construido aparece con un check; lo que llega después, en «En camino».
                     </p>
                 </div>
 
@@ -96,6 +101,7 @@ const Pricing = () => {
                                     <span className="text-4xl font-bold text-navy">{p.price}</span>
                                     <span className="text-text-body font-medium">{p.period}</span>
                                 </div>
+                                <p className="text-xs font-semibold text-primary mb-3">{p.yearly}</p>
                                 <p className="text-sm text-text-body leading-relaxed">{p.description}</p>
                             </div>
 
@@ -114,6 +120,17 @@ const Pricing = () => {
                                     </li>
                                 ))}
                             </ul>
+
+                            {p.soon.length > 0 && (
+                                <div className="mb-8 -mt-4 pt-5 border-t border-dashed border-gray-200 text-left">
+                                    <p className="text-[10px] font-bold uppercase tracking-widest text-text-body/50 mb-2">
+                                        En camino · Q1 2027
+                                    </p>
+                                    <p className="text-xs text-text-body/70 leading-relaxed">
+                                        {p.soon.join(" · ")}
+                                    </p>
+                                </div>
+                            )}
 
                             <Link
                                 href={p.href}

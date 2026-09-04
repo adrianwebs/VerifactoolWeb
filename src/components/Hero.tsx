@@ -18,7 +18,7 @@ const Hero = () => {
                             transition={{ duration: 0.5 }}
                         >
                             <span className="inline-block px-4 py-1.5 rounded-full bg-accent-blue text-primary text-xs font-bold tracking-wider uppercase mb-6">
-                                ERP online compatible Verifactu 2026
+                                ERP online compatible Verifactu 2027
                             </span>
                             <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                                 Software de facturación Verifactu para autónomos y pymes
@@ -38,9 +38,9 @@ const Hero = () => {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto lg:mx-0">
                                 {[
-                                    "Alineado con normativa Verifactu 2026",
-                                    "Facturación, gastos e impuestos",
-                                    "CRM visual con pipeline de ventas",
+                                    "Alineado con el reglamento Verifactu (RD 1007/2023)",
+                                    "Facturas, presupuestos y gastos",
+                                    "Tus clientes y su histórico en un sitio",
                                     "Diseñado para autónomos y pymes",
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-2 text-sm text-text-body font-medium">

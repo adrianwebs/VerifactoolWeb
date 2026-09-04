@@ -9,27 +9,27 @@ import JsonLd from "./SEO/JsonLd";
 const faqs = [
     {
         question: "¿Qué es Verifactu y por qué necesito un software compatible?",
-        answer: "Verifactu es el nuevo reglamento de la AEAT que obliga a los sistemas de facturación a garantizar la integridad, conservación e inalterabilidad de los registros. A partir de 2026, será obligatorio usar un software que cumpla estos requisitos para evitar sanciones.",
+        answer: "Verifactu es el reglamento de la AEAT (RD 1007/2023) que obliga a los sistemas de facturación a garantizar la integridad, conservación e inalterabilidad de los registros. Tras la prórroga del RD-ley 15/2025, será obligatorio usar un software que cumpla estos requisitos desde el 1 de enero de 2027 para sociedades y desde el 1 de julio de 2027 para autónomos.",
     },
     {
         question: "¿VerifacTool cumple la normativa Verifactu de la AEAT?",
-        answer: "Sí, VerifacTool ha sido diseñado siguiendo las especificaciones técnicas de la Ley Antifraude y el reglamento Verifactu, incluyendo el encadenamiento de facturas, firma hash y generación de códigos QR automáticos.",
+        answer: "Sí. VerifacTool registra cada factura en la AEAT en modo Veri*Factu a través de un colaborador social homologado, con encadenamiento, huella y el código QR reglamentario impreso en el PDF.",
     },
     {
         question: "¿Puedo migrar mis datos desde Excel u otro programa de facturación?",
-        answer: "¡Por supuesto! Disponemos de herramientas de importación masiva para que puedas traer tus clientes, productos y facturas históricas sin perder información y empezar a trabajar en minutos.",
+        answer: "Sí. Te acompañamos en la migración: nos pasas tu listado de clientes y tu histórico y lo dejamos cargado antes de que empieces. La importación autoservicio llegará en Q1 2027.",
     },
     {
         question: "¿VerifacTool sirve tanto para autónomos como para pymes?",
         answer: "Absolutamente. VerifacTool es escalable. Desde un autónomo que solo necesita emitir facturas legales, hasta una pyme que requiere CRM, control de gastos y gestión de equipos.",
     },
     {
-        question: "¿Necesito ser contable para usar el módulo de gastos e impuestos?",
-        answer: "No. Hemos simplificado la contabilidad para que cualquier persona pueda llevar su negocio. El sistema categoriza gastos automáticamente y genera borradores de modelos tributarios listos para presentar.",
+        question: "¿Cómo llevo los gastos en VerifacTool?",
+        answer: "Registras cada factura de proveedor con su base, IVA e IRPF y la asignas a una categoría contable de las que usa Hacienda, sin necesidad de saber contabilidad. La lectura automática de tickets con OCR y los borradores de los modelos 303 y 130 están en desarrollo para Q1 2027.",
     },
     {
         question: "¿Puedo invitar a mi asesor para que revise mis datos?",
-        answer: "Sí, puedes dar acceso a tu asesor con un perfil específico de 'Solo Lectura' o 'Gestión Contable' para que él mismo descargue la información que necesita sin que tengas que enviarle archivos por email.",
+        answer: "Sí. Tu asesor entra con su propio usuario y ve tus facturas y gastos sin que tengas que mandarle archivos por email. Si tu asesoría trabaja con varios clientes, puede gestionar todos sus NIF desde una sola cuenta.",
     },
 ];
 

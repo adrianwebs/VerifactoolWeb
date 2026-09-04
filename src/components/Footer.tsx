@@ -58,7 +58,7 @@ const Footer = () => {
                             <li><Link href="/comparativas/mejor-software-facturacion" className="text-text-body hover:text-primary transition-colors text-[15px]">Mejor Software Facturación</Link></li>
                             <li><Link href="/verifactu/software-compatible" className="text-text-body hover:text-primary transition-colors text-[15px]">Software Compatible Verifactu</Link></li>
                             <li><Link href="/verifactu/errores-comunes" className="text-text-body hover:text-primary transition-colors text-[15px]">Errores Comunes</Link></li>
-                            <li><Link href="/demo" className="text-primary font-bold hover:underline transition-colors text-[15px]">Probar gratis 7 días</Link></li>
+                            <li><Link href="/demo" className="text-primary font-bold hover:underline transition-colors text-[15px]">Probar gratis 14 días</Link></li>
                         </ul>
                     </div>
                 </div>

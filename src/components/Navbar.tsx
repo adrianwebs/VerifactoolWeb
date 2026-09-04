@@ -43,7 +43,17 @@ const Navbar = () => {
                         { name: "Software para Autónomos", href: "/software-facturacion/autonomos" },
                         { name: "Software para PYMES", href: "/software-facturacion/pymes" },
                         { name: "Software Verifactu", href: "/software-facturacion/verifactu" },
+                        { name: "CRM Integrado", href: "/software-crm-online" },
                         { name: "Contabilidad Online", href: "/software-contabilidad-online" },
+                    ]
+                },
+                {
+                    title: "Funcionalidades",
+                    icon: <Zap className="text-secondary" size={18} />,
+                    links: [
+                        { name: "Factura Electrónica", href: "/funcionalidades/facturacion-electronica" },
+                        { name: "OCR: Escaneo Tickets", href: "/funcionalidades/ocr-gastos" },
+                        { name: "Control de Impuestos", href: "/verifactu/requisitos-tecnicos" },
                     ]
                 },
                 {
@@ -51,15 +61,15 @@ const Navbar = () => {
                     icon: <ShieldCheck className="text-primary" size={18} />,
                     links: [
                         { name: "Qué es Verifactu", href: "/verifactu" },
-                        { name: "Normativa y Requisitos", href: "/verifactu/requisitos-tecnicos" },
-                        { name: "Sanciones 2026", href: "/verifactu/sanciones" },
+                        { name: "Sanciones Verifactu", href: "/verifactu/sanciones" },
+                        { name: "Software Compatible", href: "/verifactu/software-compatible" },
                     ]
                 },
                 {
                     title: "Comparar",
                     icon: <BarChart2 className="text-primary" size={18} />,
                     links: [
-                        { name: "Mejor Software 2026", href: "/comparativas/mejor-software-facturacion" },
+                        { name: "Mejor Software 2027", href: "/comparativas/mejor-software-facturacion" },
                         { name: "Alternativa a Holded", href: "/comparativas/holded-alternativa" },
                         { name: "Software Compatible", href: "/verifactu/software-compatible" },
                     ]
@@ -178,7 +188,7 @@ const Navbar = () => {
                                 href="/demo"
                                 className="btn-primary py-2.5 px-6 text-[15px] whitespace-nowrap"
                             >
-                                Prueba gratis 7 días
+                                Prueba gratis 14 días
                             </Link>
                         </div>
                     </div>
@@ -317,7 +327,7 @@ const Navbar = () => {
                                     className="btn-primary text-center"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    Prueba gratis 7 días
+                                    Prueba gratis 14 días
                                 </Link>
                             </div>
                         </div>

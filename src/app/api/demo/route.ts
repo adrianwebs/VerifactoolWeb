@@ -1,57 +1,78 @@
-import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+
+/**
+ * Solicitud de demo. La web solo valida y reenvía: quien guarda el lead y envía
+ * los correos (aviso interno y autorespuesta) es la app, que ya tiene el SMTP
+ * de verifactool.com configurado. Así hay una sola tubería de correo y las
+ * credenciales viven en un único sitio.
+ */
+
+const LEADS_API_URL = process.env.LEADS_API_URL ?? 'https://app.verifactool.com/api/leads';
+
+const recortar = (v: unknown, max: number) => String(v ?? '').trim().slice(0, max);
 
 export async function POST(req: NextRequest) {
     try {
         const body = await req.json();
-        const { firstName, lastName, email, plan, message } = body;
 
-        const resend = new Resend(process.env.RESEND_API_KEY);
-        console.log('API Key length:', process.env.RESEND_API_KEY?.length || 0);
+        const nombre = recortar(body.firstName, 120);
+        const apellidos = recortar(body.lastName, 120);
+        const email = recortar(body.email, 200).toLowerCase();
+        const plan = recortar(body.plan, 40);
+        const mensaje = recortar(body.message, 4000);
 
-        console.log('--- Nueva solicitud de demo ---');
-        console.log('Datos:', { firstName, lastName, email, plan });
-
-        if (!firstName || !email) {
-            return NextResponse.json({ error: 'Faltan campos obligatorios' }, { status: 400 });
+        if (!nombre || !email) {
+            return NextResponse.json(
+                { error: 'Necesitamos tu nombre y tu email para poder responderte.' },
+                { status: 400 }
+            );
         }
 
-        if (!process.env.RESEND_API_KEY) {
-            console.error('Error: RESEND_API_KEY no configurada en el servidor');
-            return NextResponse.json({ error: 'Configuración del servidor incompleta' }, { status: 500 });
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+            return NextResponse.json(
+                { error: 'Ese email no parece válido. Revísalo y vuelve a enviarlo.' },
+                { status: 400 }
+            );
         }
 
-        const { data, error } = await resend.emails.send({
-            from: 'VerifacTool <onboarding@resend.dev>',
-            to: ['adrygoleador@gmail.com'],
-            subject: `🚀 Nuevo LEAD: Demo solicitada por ${firstName} ${lastName}`,
-            html: `
-        <h1>Nuevo Lead de VerifacTool</h1>
-        <p>Se ha recibido una nueva solicitud de demo con los siguientes detalles:</p>
-        <hr />
-        <ul>
-          <li><strong>Nombre completo:</strong> ${firstName} ${lastName}</li>
-          <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Plan interesado:</strong> ${plan}</li>
-          <li><strong>Mensaje:</strong> ${message || 'Sin mensaje adicional'}</li>
-        </ul>
-        <hr />
-        <p>Este correo ha sido enviado automáticamente desde el formulario de demo.</p>
-      `,
+        const apiKey = process.env.LEADS_API_KEY;
+        if (!apiKey) {
+            console.error('LEADS_API_KEY sin configurar: no se puede registrar el lead');
+            return NextResponse.json(
+                { error: 'No hemos podido registrar tu solicitud. Escríbenos a hola@verifactool.com y lo resolvemos.' },
+                { status: 500 }
+            );
+        }
+
+        const res = await fetch(LEADS_API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-Lead-Key': apiKey },
+            body: JSON.stringify({
+                nombre,
+                apellidos,
+                email,
+                plan,
+                mensaje,
+                origen: recortar(req.headers.get('referer'), 300),
+            }),
+            signal: AbortSignal.timeout(15000),
         });
 
-        if (error) {
-            console.error('Error de Resend:', error);
-            return NextResponse.json({ error: error.message || 'Error al enviar el email' }, { status: 500 });
+        if (!res.ok) {
+            console.error('La API de leads respondió', res.status, await res.text().catch(() => ''));
+            return NextResponse.json(
+                { error: 'No hemos podido registrar tu solicitud. Escríbenos a hola@verifactool.com y lo resolvemos.' },
+                { status: 502 }
+            );
         }
 
-        console.log('Email enviado correctamente:', data);
-        return NextResponse.json({ success: true, data });
-    } catch (err: any) {
-        console.error('Error interno API demo:', err);
-        return NextResponse.json({
-            error: 'Error interno del servidor',
-            details: err.message
-        }, { status: 500 });
+        const { id } = await res.json();
+        return NextResponse.json({ success: true, leadId: id ?? null });
+    } catch (err) {
+        console.error('Error en /api/demo:', err);
+        return NextResponse.json(
+            { error: 'Algo ha fallado por nuestra parte. Inténtalo de nuevo en un minuto.' },
+            { status: 500 }
+        );
     }
 }

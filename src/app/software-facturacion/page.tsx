@@ -35,21 +35,21 @@ const solutions = [
         desc: "Sencillez radical. Factura desde el móvil, saca fotos a tus tickets con OCR y cumple la ley sin esfuerzo.",
         href: "/software-facturacion/autonomos",
         icon: <Smartphone size={24} />,
-        price: "15€/mes"
+        price: "12,90€/mes"
     },
     {
         title: "Para PYMES",
         desc: "Control total multiusuario. Gestión de clientes, conciliación bancaria y analítica avanzada para tu empresa.",
         href: "/software-facturacion/pymes",
         icon: <Briefcase size={24} />,
-        price: "29€/mes"
+        price: "24,90€/mes"
     },
     {
         title: "Software Verifactu",
         desc: "Nuestra solución 100% nativa para la nueva normativa AEAT. Garantía legal absoluta y soporte experto.",
         href: "/software-facturacion/verifactu",
         icon: <ShieldCheck size={24} />,
-        price: "Desde 12€/mes"
+        price: "Desde 6,90€/NIF"
     }
 ];
 

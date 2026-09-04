@@ -13,7 +13,7 @@ import { useSearchParams } from "next/navigation";
 
 function DemoForm() {
     const searchParams = useSearchParams();
-    const selectedPlan = searchParams.get("plan") || "starter";
+    const selectedPlan = searchParams.get("plan") || "autonomo";
 
     const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle");
     const [formData, setFormData] = React.useState({
@@ -64,7 +64,7 @@ function DemoForm() {
                 </div>
                 <h3 className="text-2xl font-bold text-navy">¡Solicitud recibida!</h3>
                 <p className="text-text-body">
-                    Gracias por tu interés en VerifacTool. Hemos recibido tus datos y un experto se pondrá en contacto contigo en breve para configurar tu prueba de 7 días.
+                    Gracias por tu interés en VerifacTool. Hemos recibido tus datos y un experto se pondrá en contacto contigo en breve para configurar tu prueba de 14 días.
                 </p>
                 <button
                     onClick={() => setStatus("idle")}
@@ -127,9 +127,9 @@ function DemoForm() {
                         onChange={handleChange}
                         className="w-full bg-slate-50 border border-slate-100 rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 outline-none appearance-none transition-all cursor-pointer font-medium text-navy"
                     >
-                        <option value="starter">Plan Starter - Autónomos (15€/mes)</option>
-                        <option value="growth">Plan Growth - Pymes (29€/mes)</option>
-                        <option value="asesorias">Plan Especial Asesorías (69€/mes)</option>
+                        <option value="autonomo">Autónomo — 12,90€/mes</option>
+                        <option value="negocio">Negocio — 24,90€/mes</option>
+                        <option value="asesoria">Asesoría — 6,90€/NIF, mínimo 10</option>
                     </select>
                     <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-primary">
                         <Zap size={16} />
@@ -188,7 +188,7 @@ export default function DemoPage() {
                                 <Zap size={14} /> Acceso Instantáneo
                             </div>
                             <h1 className="text-4xl md:text-6xl font-extrabold text-navy leading-tight mb-8">
-                                Prueba VerifacTool <span className="text-primary underline decoration-primary/20">gratis</span> por 7 días
+                                Prueba VerifacTool <span className="text-primary underline decoration-primary/20">gratis</span> por 14 días
                             </h1>
                             <p className="text-xl text-text-body mb-10 leading-relaxed">
                                 Descubre por qué miles de autónomos y pymes eligen VerifacTool para cumplir con Verifactu sin complicaciones técnicas. Te ayudamos con la puesta en marcha inicial.

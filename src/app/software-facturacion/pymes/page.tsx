@@ -69,7 +69,7 @@ export default function SoftwarePymesPage() {
                                 Reservar Demo Gratuita
                             </Link>
                             <Link href="/precios" className="text-white font-bold hover:text-primary transition-colors flex items-center gap-2">
-                                Ver planes Pyme desde 29€ <ArrowRight size={18} />
+                                Ver planes Negocio desde 24,90€ <ArrowRight size={18} />
                             </Link>
                         </div>
                     </div>

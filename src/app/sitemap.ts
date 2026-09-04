@@ -143,6 +143,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
         },
         {
+            url: `${baseUrl}/software-crm-online`,
+            lastModified: '2026-04-11',
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/funcionalidades/facturacion-electronica`,
+            lastModified: '2026-04-11',
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/funcionalidades/ocr-gastos`,
+            lastModified: '2026-04-11',
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+        },
+        {
             url: `${baseUrl}/clientes`,
             lastModified: '2026-03-26',
             changeFrequency: 'monthly' as const,
@@ -150,7 +168,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         },
         // TODO: Añadir cuando se creen los page.tsx:
         // /comparativas/quipu-alternativa
-        // /funcionalidades/facturacion-electronica
         // /recursos/faq-verifactu
     ];
 

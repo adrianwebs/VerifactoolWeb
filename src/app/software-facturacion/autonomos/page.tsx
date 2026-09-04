@@ -17,7 +17,7 @@ import {
 
 export const metadata: Metadata = {
     title: "Software Facturación Autónomos 2026: Fácil y Verifactu | VerifacTool",
-    description: "El programa de facturación para autónomos más sencillo y potente. Cumple con Verifactu, gestiona gastos con OCR y envía facturas en 1 clic. ¡Desde 15€/mes!",
+    description: "El programa de facturación para autónomos más sencillo y potente. Cumple con Verifactu, controla tus gastos y envía facturas en un clic. Desde 12,90€/mes.",
     openGraph: {
         title: "Software Facturación Autónomos: La mejor herramienta del 2026",
         description: "Controla tu negocio de autónomo sin dolor de cabeza. Compatible con Verifactu y TicketBAI.",
@@ -69,7 +69,7 @@ export default function SoftwareAutonomosPage() {
                                 Empezar gratis ahora
                             </Link>
                             <Link href="/precios" className="text-navy font-bold hover:text-primary transition-colors flex items-center gap-2">
-                                Ver planes desde 15€/mes <ArrowRight size={18} />
+                                Ver planes desde 12,90€/mes <ArrowRight size={18} />
                             </Link>
                         </div>
                     </div>
@@ -135,7 +135,7 @@ export default function SoftwareAutonomosPage() {
                         </div>
                         <div className="lg:w-1/2 bg-white/5 backdrop-blur-xl rounded-[40px] p-10 border border-white/10">
                             <div className="text-center mb-8">
-                                <div className="text-4xl font-black text-white mb-2">15€<span className="text-lg font-normal opacity-60">/mes</span></div>
+                                <div className="text-4xl font-black text-white mb-2">12,90€<span className="text-lg font-normal opacity-60">/mes</span></div>
                                 <p className="text-sm uppercase tracking-widest font-bold text-primary">Plan Autónomo Todo Incluido</p>
                             </div>
                             <ul className="space-y-4 mb-10 text-sm">

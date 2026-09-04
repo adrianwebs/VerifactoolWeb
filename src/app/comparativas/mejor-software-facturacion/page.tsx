@@ -95,7 +95,7 @@ export default function MejorSoftwareVerifactu() {
             {
                 "@type": "Question",
                 "name": "¿Cuál es el mejor software de facturación para autónomos en España?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Para autónomos en España en 2026, VerifacTool ofrece la mejor relación calidad-precio con cumplimiento Verifactu completo desde 15€/mes, incluyendo OCR de tickets, borradores de impuestos y soporte por chat." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Para autónomos en España, VerifacTool ofrece la mejor relación calidad-precio con registro Veri*Factu efectivo en la AEAT desde 12,90€/mes, facturas y clientes ilimitados, control de gastos y 14 días de prueba sin tarjeta." }
             }
         ]
     };

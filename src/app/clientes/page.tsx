@@ -330,7 +330,7 @@ export default function ClientesPage() {
                                 Únete a ellos. Cumple Verifactu sin esfuerzo.
                             </h2>
                             <p className="text-xl text-white/70 max-w-2xl mx-auto mb-10">
-                                Prueba VerifacTool gratis durante 7 días y descubre
+                                Prueba VerifacTool gratis durante 14 días y descubre
                                 por qué negocios locales ya nos eligen.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -338,7 +338,7 @@ export default function ClientesPage() {
                                     href="/demo"
                                     className="bg-primary text-white py-5 px-12 rounded-2xl font-bold text-lg hover:scale-105 transition-transform"
                                 >
-                                    🚀 Prueba gratis 7 días
+                                    🚀 Prueba gratis 14 días
                                 </Link>
                                 <Link
                                     href="/precios"

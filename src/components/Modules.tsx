@@ -10,9 +10,9 @@ const modules = [
         title: "Facturación Verifactu sin errores",
         description: "Módulo Fiscal y Facturación",
         bullets: [
-            "Facturas encadenadas (hash SHA-256)",
-            "QR Verifactu automático en cada PDF",
-            "Envío automático a la AEAT",
+            { text: "Registro Veri*Factu en la AEAT", soon: false },
+            { text: "QR reglamentario en cada PDF", soon: false },
+            { text: "Rectificativas y anulaciones", soon: false },
         ],
         icon: <FileText className="text-primary" size={24} />,
         href: "/software-facturacion/verifactu",
@@ -22,33 +22,33 @@ const modules = [
         title: "Gastos, IVA y modelos sin Excel",
         description: "Módulo Contable y Gastos",
         bullets: [
-            "Lectura de tickets con OCR",
-            "Clasificación inteligente de gastos",
-            "Borradores de Modelos 303 y 130",
+            { text: "Gastos por categoría contable", soon: false },
+            { text: "Lectura de tickets con OCR", soon: true },
+            { text: "Borradores de modelos 303 y 130", soon: true },
         ],
         icon: <Calculator className="text-primary" size={24} />,
         href: "/software-contabilidad-online",
         cta: "Ver contabilidad online",
     },
     {
-        title: "Del lead a la factura en un clic",
+        title: "Del presupuesto a la factura en un clic",
         description: "Módulo CRM y Ventas",
         bullets: [
-            "Pipeline visual en Kanban",
-            "Presupuestos a factura en un clic",
-            "Portal cliente para autogestión",
+            { text: "Presupuestos a factura en un clic", soon: false },
+            { text: "Ficha de cliente con notas y avisos", soon: false },
+            { text: "Portal del cliente para autogestión", soon: true },
         ],
         icon: <Users className="text-primary" size={24} />,
-        href: "#",
+        href: "/software-crm-online",
         cta: "Saber más",
     },
     {
         title: "Cobros automáticos y suscripciones",
         description: "Automatización y Cobros",
         bullets: [
-            "Facturas recurrentes automáticas",
-            "Pagos con Stripe y PayPal Integrados",
-            "Recordatorios automáticos de vencimiento",
+            { text: "Envío de la factura por email al emitir", soon: false },
+            { text: "Facturas recurrentes automáticas", soon: true },
+            { text: "Pagos online con Stripe", soon: true },
         ],
         icon: <Clock className="text-primary" size={24} />,
         href: "/precios",
@@ -87,8 +87,15 @@ const Modules = () => {
                                 <ul className="space-y-3 mb-8 flex-grow">
                                     {m.bullets.map((bullet, idx) => (
                                         <li key={idx} className="flex items-start gap-2 text-text-body text-sm leading-relaxed">
-                                            <div className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                                            {bullet}
+                                            <div className={`h-1.5 w-1.5 rounded-full mt-1.5 flex-shrink-0 ${bullet.soon ? "bg-text-body/25" : "bg-primary"}`} />
+                                            <span className={bullet.soon ? "text-text-body/60" : undefined}>
+                                                {bullet.text}
+                                                {bullet.soon && (
+                                                    <span className="ml-2 align-middle text-[10px] font-bold uppercase tracking-wider text-text-body/45 whitespace-nowrap">
+                                                        En camino · Q1 2027
+                                                    </span>
+                                                )}
+                                            </span>
                                         </li>
                                     ))}
                                 </ul>

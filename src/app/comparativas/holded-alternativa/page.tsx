@@ -66,7 +66,7 @@ export default function AlternativaHoldedPage() {
                             <div className="w-12 bg-primary flex items-center justify-center text-white font-black text-xl z-10 -mx-2 md:rotate-0 rotate-90">VS</div>
                             <div className="flex-1 p-8 bg-primary/5 flex flex-col items-center justify-center">
                                 <div className="text-primary font-bold mb-4 uppercase tracking-widest text-xs">VerifacTool</div>
-                                <div className="text-3xl font-black text-navy">15€<span className="text-sm">/mes</span></div>
+                                <div className="text-3xl font-black text-navy">12,90€<span className="text-sm">/mes</span></div>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@ export default function AlternativaHoldedPage() {
                                 </thead>
                                 <tbody>
                                     {[
-                                        { n: "Precio (Plan Base)", h: "32€/mes", v: "15€/mes" },
+                                        { n: "Precio (Plan Base)", h: "32€/mes", v: "12,90€/mes" },
                                         { n: "Verifactu Incluido", h: "Configurable", v: "Nativo 100%" },
                                         { n: "OCR de tickets", h: "Paga más", v: "Incluido" },
                                         { n: "Simplicidad", h: "Media-Baja", v: "Muy Alta" },
